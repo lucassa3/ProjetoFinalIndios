@@ -1,45 +1,56 @@
 from flask import Flask, render_template, request, redirect, session, json, jsonify, url_for
 import requests
-import uuid
-import os
-from firebase import firebase
 
-firebase = firebase.FirebaseApplication('https://insper-sna.firebaseio.com', None)
-
-
-
-videos = []
-sum_ratings = []
-n_ratings = []
 
 app = Flask(__name__)
 
-@app.route('/youInsper')
-def hello():
-    result = firebase.get('/videos', None)
 
-    del videos[:]
-    del sum_ratings[:]
-    del n_ratings[:]
+tribos_dict = {'caetes': 0, 'caiapos': 0, 'caingangue': 0, 'guajajaras': 0, 'guaranis': 0, 'ianomamis': 0, 'macuxi': 0, 'marubos': 0, 'pataxos': 0, 'potiguaras': 0, 'tapuias': 0, 'terenas': 0, 'ticunas': 0, 'xavantes': 0}
 
-    for i in range(len(result)):
-        sum_ratings.append(result[i]['sum_rating'])
-        n_ratings.append(result[i]['n_rating'])
+@app.route('/')
+def quiz():
 
-        rating = 0
-        
-        if (result[i]['n_rating']):
-            rating = result[i]['sum_rating']/result[i]['n_rating']
-        
-        videos.append((i, result[i]['url'], rating))
+    tribos_dict = dict.fromkeys(tribos_dict, 0)
 
-    print(videos)
-    print(sum_ratings)
-    print(n_ratings)
+    return render_template('quiz.html')
+
+@app.route('/validateQuiz', methods = ["POST"])
+def validateQuiz():
+    #TODO
+
+    historia = int(request.form['historia'])
+    lingua = int(request.form['lingua'])
+    cultura = int(request.form['cultura'])
+    religiao = int(request.form['religiao'])
+    locpop = int(request.form['locpop'])
+    dieta = int(request.form['dieta'])
+
+
+    if lingua == 1:
+        tribos_dict['caiapos'] +=1
+        tribos_dict['caingangue'] +=1
+        tribos_dict['xavantes'] +=1
+    elif lingua == 2:
+        tribos_dict['caetes'] +=1
+        tribos_dict['guajajara'] +=1
+        tribos_dict['guarani'] +=1
+        tribos_dict['tapuias'] +=1
+    elif lingua == 3:
+        tribos_dict['pataxos'] +=1
+    elif lingua == 4:
+        tribos_dict['terena'] +=1
+    elif lingua == 5:
+        tribos_dict['ticunas'] +=1
+    elif lingua == 6:
+        tribos_dict['marubos'] +=1
+
     
-    sorted_videos = sorted(videos, key=lambda tup: tup[2], reverse=True)
 
-    return render_template('index.html', videos=sorted_videos)
+
+
+
+
+
 
 @app.route('/youInsper2')
 def hello2():
