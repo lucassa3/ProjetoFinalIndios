@@ -45,8 +45,11 @@
           <hr>
 
           <!-- Preview Image -->
-          <img class="img-fluid rounded" src="http://i.imgur.com/VehWTOD.png" alt="">
-
+          <img class="img-fluid rounded" src="../static/fotos/caetes.jpg" alt="">
+          <h4 class="mt-4">Tribos similares:</h4>
+          {% for n in r_geral %}
+            <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+          {% endfor %}
           <hr>
 
           <!-- Post Content -->
@@ -84,7 +87,7 @@
             Pesquisas recentes colocam em dúvida se o bispo Pero Sardinha teria mesmo sido devorado pelos Caetés. O verdadeiro motivo da morte do primeiro bispo do Brasil poderia ter sido a vingança do Governador Geral, Duarte da Costa, e de seu filho Álvaro da Costa, que poderiam ter tramado tal crime e incriminado os caetés.
             Álvaro da Costa, homem violento, que usava da força para intimidar principalmente os índios, se relacionava sexualmente com as indígenas. Durante um de seus sermões, o bispo Sardinha teria condenado as ações de Álvaro da Costa, o que resultou no início de um conflito entre o bispo e o governador-geral.</p>
 
-            h4 class="mt-4">Tribos similares:</h4>
+            <h4 class="mt-4">Tribos similares:</h4>
             {% for n in r_cultura %}
               <p><a href="{{ url_for(n) }}">{{n}}</a></p>
             {% endfor %}
@@ -150,8 +153,8 @@
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="..static/js/jquery.min.js"></script>
-    <script src="..static/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/bootstrap.bundle.min.js"></script>
 
   </body>
 

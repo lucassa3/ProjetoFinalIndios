@@ -45,8 +45,11 @@
           <hr>
 
           <!-- Preview Image -->
-          <img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">
-
+          <img class="img-fluid rounded" src="../static/fotos/potiguaras.jpg" alt="">
+          <h4 class="mt-4">Tribos similares:</h4>
+          {% for n in r_geral %}
+            <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+          {% endfor %}
           <hr>
 
           <!-- Post Content -->
@@ -80,9 +83,9 @@
               
               No entanto, nem todos os índios assumem tais práticas como legítimas devido a fatores como a conversão religiosa, em que os conceitos de saúde, doença e cura são expressos geralmente através das interpretações oficiais das igrejas.</p>
 
-              <h4 class="mt-4">Tribos similares:</h4>
+            <h4 class="mt-4">Tribos similares:</h4>
             {% for n in r_religiao %}
-              <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+            <p><a href="{{ url_for(n) }}">{{n}}</a></p>
             {% endfor %}
 
 
@@ -134,8 +137,8 @@
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="..static/js/jquery.min.js"></script>
-    <script src="..static/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/bootstrap.bundle.min.js"></script>
 
   </body>
 

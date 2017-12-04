@@ -45,8 +45,11 @@
           <hr>
 
           <!-- Preview Image -->
-          <img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">
-
+          <img class="img-fluid rounded" src="../static/fotos/marubos.jpg" alt="">
+          <h4 class="mt-4">Tribos similares:</h4>
+          {% for n in r_geral %}
+            <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+          {% endfor %}
           <hr>
 
           <!-- Post Content -->
@@ -79,7 +82,7 @@
               Segundo Júlio César Melatti[7], entre os marubos, há dois tipos de agentes da magia. Um deles, que entra em transe e recebe em seu corpo espíritos de outras camadas do universo enquanto sua própria alma visita essas camadas, exerce mais do que atividades de cura, uma vez o simples contato com esses seres já é razão suficiente para procurar comunicação com eles. O outro tipo é constituído por aqueles que entoam cânticos de cura sobre os doentes. Ambos os tipos fazem uso da ayahuasca e do rapé de tabaco.
               Ainda segundo Melatti, para os marubos o universo é constituído de várias camadas terrestres, das quais a superior é aquela onde vivemos, e várias camadas celestes. Para os seres humanos talvez a camada celeste mais importante seja a segunda, contando-se de baixo par cima, pois é para lá que devem se dirigir suas almas após a morte, através do percurso de um caminho cheio de perigos, a cujos obstáculos aqueles que não seguiram as regras sociais sucumbem. Observe-se a concepção do não cumprimento das regras sociais associado à morte e adoecimento. As doenças na concepção marubo, conforme os cânticos de cura, se formam de partes de outros seres (mítico membros e órgãos e pedaços de animais abatidos por um herói mítico).</p>
 
-              h4 class="mt-4">Tribos similares:</h4>
+            <h4 class="mt-4">Tribos similares:</h4>
             {% for n in r_cultura %}
               <p><a href="{{ url_for(n) }}">{{n}}</a></p>
             {% endfor %}
@@ -132,8 +135,8 @@
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="..static/js/jquery.min.js"></script>
-    <script src="..static/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/bootstrap.bundle.min.js"></script>
 
   </body>
 

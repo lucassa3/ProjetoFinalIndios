@@ -45,8 +45,11 @@
           <hr>
 
           <!-- Preview Image -->
-          <img class="img-fluid rounded" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpSG3k5bF-MtdYxRYHk-F0eduLiHo6oQUO4RYsogj63pkHuCtTPA" alt="">
-
+          <img class="img-fluid rounded" src="../static/fotos/macuxi.jpg" alt="">
+          <h4 class="mt-4">Tribos similares:</h4>
+          {% for n in r_geral %}
+            <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+          {% endfor %}
           <hr>
 
           <!-- Post Content -->
@@ -72,7 +75,7 @@
           <h2 class="mt-4">Cultura</h2><hr>
             <p>Um dos aspectos culturas mais curiosos nesse grupo é a organização social. A um olhar desatento e sem interesse, a distribuição de famílias dentro de uma aldeia Macuxi é, a princípio, aleatório. Pequenas casas abrigam famílias e estão localizadas em um lugar que julgaram bom. Na verdade, as casas são distribuídas em um território por parentelas. Vivem em aldeias ligadas por trilhas e caminhos, com casas construídas em volta de um pátio central. Um exemplo muito comum disso é quando uma moça e um homem se casam. Após o casamento, o casal passa a morar na casa da família da moça, e o pai dela se torna um líder-sogro, cuja habilidade política na manipulação dos laços de parentesco depende sua existência. Com o declínio do prestígio do líder-sogro (ou sua morte), o grupo local tende a tomar outras formas, desfazer-se. Mesmo em caso de morte, porém, a aldeia persiste como referência histórico-geográfica.</p>
 
-            h4 class="mt-4">Tribos similares:</h4>
+            <h4 class="mt-4">Tribos similares:</h4>
             {% for n in r_cultura %}
               <p><a href="{{ url_for(n) }}">{{n}}</a></p>
             {% endfor %}
@@ -146,8 +149,8 @@
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="..static/js/jquery.min.js"></script>
-    <script src="..static/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/bootstrap.bundle.min.js"></script>
 
   </body>
 

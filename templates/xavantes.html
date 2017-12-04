@@ -45,8 +45,11 @@
           <hr>
 
           <!-- Preview Image -->
-          <img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">
-
+          <img class="img-fluid rounded" src="../static/fotos/xavantes.jpg" alt="">
+          <h4 class="mt-4">Tribos similares:</h4>
+          {% for n in r_geral %}
+            <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+          {% endfor %}
           <hr>
 
           <!-- Post Content -->
@@ -78,7 +81,7 @@
 
             <p>O Ritual de furo de orelha acontece na passagem da adolescência para a vida adulta. Após os cinco anos de reclusão, acontece uma festa na aldeia, chamada Danhono, onde a orelha dos jovens é furada com um osso de onça parda. Após o ritual, os jovens passam a ser considerados adultos e voltam ao convívio social com a tribo.</p>
 
-            h4 class="mt-4">Tribos similares:</h4>
+            <h4 class="mt-4">Tribos similares:</h4>
             {% for n in r_cultura %}
               <p><a href="{{ url_for(n) }}">{{n}}</a></p>
             {% endfor %}
@@ -139,8 +142,8 @@
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="..static/js/jquery.min.js"></script>
-    <script src="..static/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/bootstrap.bundle.min.js"></script>
 
   </body>
 

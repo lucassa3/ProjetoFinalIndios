@@ -45,8 +45,11 @@
           <hr>
 
           <!-- Preview Image -->
-          <img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">
-
+          <img class="img-fluid rounded" src="../static/fotos/terena.jpg" alt="">
+          <h4 class="mt-4">Tribos similares:</h4>
+          {% for n in r_geral %}
+            <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+          {% endfor %}
           <hr>
 
           <!-- Post Content -->
@@ -73,7 +76,7 @@
           <h2 class="mt-4">Cultura</h2><hr>
             <p>Anteriormente à guerra do Paraguai os Terena tinham disponíveis grandes extensões de terra, o que permitia que praticassem agricultura itinerante, na qual a terra era cultivada, depois queimada, tocos ou restos de árvores eram retirados e então a terra não era cultivada novamente durante determinado período de tempo, para que se recuperasse. Atualmente, dentro de reservas, esse método não é mais possível devido ao espaço limitado. Eles possuem campos de cultivo permanentes e a gradagem é feita de forma mecanizada, com tratores. Os cultivos mais presentes são os de feijão, arroz e milho, que exigem alta fertilização. É plantada, de forma secundaria, uma grande variedade de produtos como abóbora, melancia, batata-doce e maxixe. Quando a produtividade da cultura principal começa a diminuir são cultivados tubérculos, pois exigem menos fertilização do solo, até a recuperação da fertilidade do solo. A pesca, coleta e caça tem, ainda hoje, grande importância para subsistência das tribos, mas era mais presente até meados dos anos 1970. Nessa época ficavam próximos a florestas e matas abundantes. Dentro da reserva, no entanto, a prática dessas atividades nem sempre é permitida, e isso diminuiu bastante sua importância. A coleta era feita por mulheres e os itens mais coletados eram mel silvestre, frutas, ovos de ema e tartaruga, palmito e raízes medicinais.</p>
 
-            h4 class="mt-4">Tribos similares:</h4>
+            <h4 class="mt-4">Tribos similares:</h4>
             {% for n in r_cultura %}
               <p><a href="{{ url_for(n) }}">{{n}}</a></p>
             {% endfor %}
@@ -127,8 +130,8 @@
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="..static/js/jquery.min.js"></script>
-    <script src="..static/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/bootstrap.bundle.min.js"></script>
 
   </body>
 

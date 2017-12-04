@@ -45,8 +45,11 @@
           <hr>
 
           <!-- Preview Image -->
-          <img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">
-
+          <img class="img-fluid rounded" src="../static/fotos/guaranis.jpg" alt="">
+          <h4 class="mt-4">Tribos similares:</h4>
+          {% for n in r_geral %}
+            <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+          {% endfor %}
           <hr>
 
           <!-- Post Content -->
@@ -84,7 +87,7 @@
               Os cânticos guarani são entoados como uma forma de demonstrar aos deuses que existem sobre a terra.
               Sua música também é entoada para o controle das forças da natureza, como falta ou excesso de chuva. Os cantos são entoados ao som de cabaças transformadas em instrumentos musicais.</p>
 
-              h4 class="mt-4">Tribos similares:</h4>
+             <h4 class="mt-4">Tribos similares:</h4>
             {% for n in r_cultura %}
               <p><a href="{{ url_for(n) }}">{{n}}</a></p>
             {% endfor %}
@@ -96,7 +99,7 @@
               A característica comum dos povos indígenas brasileiros no que tange à religião é o xamanismo. É o xamã o responsável pela condução dos rituais.
               Entre os povos tupi-guarani, o xamã é denominado pajé, a pessoa que lida com as conexões entre seres vivos, a natureza, humanos vivos e mortos.</p>
 
-              <h4 class="mt-4">Tribos similares:</h4>
+            <h4 class="mt-4">Tribos similares:</h4>
             {% for n in r_religiao %}
               <p><a href="{{ url_for(n) }}">{{n}}</a></p>
             {% endfor %}
@@ -150,8 +153,8 @@
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="..static/js/jquery.min.js"></script>
-    <script src="..static/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/bootstrap.bundle.min.js"></script>
 
   </body>
 

@@ -45,7 +45,11 @@
           <hr>
 
           <!-- Preview Image -->
-          <img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">
+          <img class="img-fluid rounded" src="../static/fotos/guajajaras.jpg" alt="">
+          <h4 class="mt-4">Tribos similares:</h4>
+          {% for n in r_geral %}
+            <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+          {% endfor %}
 
           <hr>
 
@@ -78,7 +82,7 @@
 
           <p>Outra fonte de dinheiro é a venda de maconha, plantada tradicionalmente pelos guajajara. A maconha foi introduzida por escravos africanos NO século XVIII e seu consumo ainda é uma parte integral da cultura indígena, mas sua venda gera conflitos muito sérios e violentos com AS Polícias Federal e Militar. </p>
 
-          h4 class="mt-4">Tribos similares:</h4>
+          <h4 class="mt-4">Tribos similares:</h4>
             {% for n in r_cultura %}
               <p><a href="{{ url_for(n) }}">{{n}}</a></p>
             {% endfor %}
@@ -143,8 +147,8 @@
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="..static/js/jquery.min.js"></script>
-    <script src="..static/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/bootstrap.bundle.min.js"></script>
 
   </body>
 

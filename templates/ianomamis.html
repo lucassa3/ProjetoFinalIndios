@@ -45,8 +45,11 @@
           <hr>
 
           <!-- Preview Image -->
-          <img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">
-
+          <img class="img-fluid rounded" src="../static/fotos/ianomami.jpg" alt="">
+          <h4 class="mt-4">Tribos similares:</h4>
+          {% for n in r_geral %}
+            <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+          {% endfor %}
           <hr>
 
           <!-- Post Content -->
@@ -74,7 +77,7 @@
 
             <p>Os adornos corporais são um ponto importante dos costumes Yanomami. O homem possui somente uma vestimenta, a qual constitui-se por um fio ao redor dos quadris e atado ao prepúcio para levantar o pênis. As mulheres ficam nuas, com um cordão ao redor dos quadris, onde penduram alguns tipos de adornos. Tanto homens quanto mulheres cortam o cabelo de forma circular no alto da cabeça. Realizam pintura corporal e facial, a qual consiste em desenhos geométricos ou circulares, geralmente vermelhos ou pretos. Utilizam ainda penas de diversas aves para enfeitar os cabelos e outras partes do corpo. São produzidos como artesanato: cestarias, colares, cocares, adornos de braço e brincos de penas ou hastes.</p>
 
-            h4 class="mt-4">Tribos similares:</h4>
+            <h4 class="mt-4">Tribos similares:</h4>
             {% for n in r_cultura %}
               <p><a href="{{ url_for(n) }}">{{n}}</a></p>
             {% endfor %}
@@ -133,8 +136,8 @@
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="..static/js/jquery.min.js"></script>
-    <script src="..static/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/bootstrap.bundle.min.js"></script>
 
   </body>
 

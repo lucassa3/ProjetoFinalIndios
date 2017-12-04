@@ -45,8 +45,11 @@
           <hr>
 
           <!-- Preview Image -->
-          <img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">
-
+          <img class="img-fluid rounded" src="../static/fotos/caiapos.jpg" alt="">
+          <h4 class="mt-4">Tribos similares:</h4>
+          {% for n in r_geral %}
+            <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+          {% endfor %}
           <hr>
 
           <!-- Post Content -->
@@ -78,7 +81,7 @@
               O matrimônio se contrai em idade precoce, por vezes consentido pelas mães dos noivos, sendo proibida a união entre primos cruzados. Se trata de um evento público que está previsto após a menarca das meninas (entre 10 e 12 anos). As mães e tias dos recém-casados preparam e interrompem sem prejuízos a noite de núpcias. O divórcio é possível, mas o segundo casamento é privado.
               A decoração do corpo é uma questão importante na sociedade. Dedica-se bastante tempo para raspar o cabelo e fazer desenhos coloridos na pele. Homens, mulheres e crianças ficam com a parte superior da cabeça completamente raspada. As mulheres deixam cair para trás o resto do cabelo, enquanto os homens fazem um rolo. Levam grinaldas de penas, brincos, colares e cintos e alguns homens usam um disco em seu lábio inferior. Anteriormente, todos os homens o portavam.</p>
 
-              h4 class="mt-4">Tribos similares:</h4>
+              <h4 class="mt-4">Tribos similares:</h4>
             {% for n in r_cultura %}
               <p><a href="{{ url_for(n) }}">{{n}}</a></p>
             {% endfor %}
@@ -129,8 +132,8 @@
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="..static/js/jquery.min.js"></script>
-    <script src="..static/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/bootstrap.bundle.min.js"></script>
 
   </body>
 

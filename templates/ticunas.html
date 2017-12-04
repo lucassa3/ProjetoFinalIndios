@@ -45,8 +45,11 @@
           <hr>
 
           <!-- Preview Image -->
-          <img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">
-
+          <img class="img-fluid rounded" src="../static/fotos/ticunas.jpg" alt="">
+          <h4 class="mt-4">Tribos similares:</h4>
+          {% for n in r_geral %}
+            <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+          {% endfor %}
           <hr>
 
           <!-- Post Content -->
@@ -80,7 +83,7 @@
           <h2 class="mt-4">Cultura</h2><hr>
             <p>Os Ticunas acreditam que foram pescados por Yo'i (um dos principais heróis culturais) das águas vermelhas do igarapé Eware. Por isso, se denominam Magüta, ou "povo pescado com vara" (de Magü, "pescar com vara" e o sufixo indicativo de coletivo -ta). Depois de pescados, o povo Magüta passou a residir na montanha Taiwegüne, nos arredores da casa de Yo'i, lugar sagrado para os atuais Ticuna.</p>
 
-            h4 class="mt-4">Tribos similares:</h4>
+            <h4 class="mt-4">Tribos similares:</h4>
             {% for n in r_cultura %}
               <p><a href="{{ url_for(n) }}">{{n}}</a></p>
             {% endfor %}
@@ -146,8 +149,8 @@
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="..static/js/jquery.min.js"></script>
-    <script src="..static/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/bootstrap.bundle.min.js"></script>
 
   </body>
 
