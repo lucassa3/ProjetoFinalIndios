@@ -57,11 +57,22 @@
             Os homens apresentavam-se corpulentos, possuidores de grande força física, pele queimada, em tons de marrom, cabelo longo, eram desprovidos de pêlos por todo o corpo, não costumavam usar roupas porém cobriam as partes íntimas com peças feitas de materiais rudimentares, extraídos da natureza.
             As mulheres apresentavam estrutura física pequena, mas a cor era a mesma da dos homens, costumavam manter os cabelos curtos ou longos, de corpos rechonchudos. Elas também escondiam suas partes íntimas e adornavam seu corpo com o que encontravam na natureza.</p>
 
+            <h4 class="mt-4">Tribos similares:</h4>
+            {% for n in r_historia %}
+              <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+            {% endfor %}
+
           <h2 class="mt-4">Lingua</h2><hr>
             <p>Quais são as características linguísticas desse povo? Descrever melhor aspectos como língua, tronco, etc.
               A linguagem era um tanto mal entendida, pois era trêmula, e cantada, não se entendia nada. Dezenas de palavras foram usadas na linguagem dos tapuias como por exemplo; carfa, caruatá, cayú, comatyn, corpamba, corraveara, cucuraí, ditre, entre outros.
               Assim, por exemplo, segundo o jesuíta Jácome Monteiro, escrevendo no início do século XVII, foram os heróis civilizadores que estabeleceram a distinção entre Tupis e Tapuias: “Dizem mais que este Maíra Tupã dividiu entre eles as línguas para que tivessem guerra com os Tapuias, mas não sabem dar a razão delas” (apud Leite, 1938-50, 8:408).
               Se é nos primeiros relatos e crônicas coloniais que se encontra esta clara distinção entre grupos da “língua geral” e “tapuias”, esta visão foi aprimorada pelos historiadores e escritores do século XIX, que tomavam o Tupi do século XVI como símbolo maior da nacionalidade. Não é difícil identificar os contrapontos deste Tupi idealizado: além do onipresente escravo africano e mulato, encontramos também uma legião de Botocudos, Coroados e Bugres, abordada pela expansão pós-colonial e pelos cientistas estrangeiros. Nas palavras de Manuela Carneiro da Cunha, “o que os Tupi- Guarani são para a nacionalidade, os Botocudos são para a ciência” (Carneiro da Cunha, 1992, 136). Em São Paulo, era praticamente unânime o consenso em torno da insignificância do Tapuia, “que contingente quase nulo forneceram à nossa constituição de povo” (Freitas, 1936, 29-30).</p>
+
+              <h4 class="mt-4">Tribos similares:</h4>
+            {% for n in r_lingua %}
+              <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+            {% endfor %}
+
             
           <h2 class="mt-4">Cultura</h2><hr>
             <p>A Vida Amorosa dos Tapuias
@@ -72,7 +83,14 @@
               O poder real não era hereditário, este era substituído quando morto. O rei distinguia-se dos outros pelos cabelos e pelas unhas. Os tapuias eram muito obedientes ao rei.
               Os tapuias se enfeitavam da cabeça aos pés para as lutas. Suas armas eram as flechas, as pranchetas, arcos e dardos, que usavam com grande habilidade. Usavam também as clavas e machados de mão; as armas eram enfeitadas com bonitas plumas. Eles não se utilizavam das armas de fogo, passaram a usar em razão da Guerra dos Bárbaros.
 
+
+
               </p>
+
+              h4 class="mt-4">Tribos similares:</h4>
+            {% for n in r_cultura %}
+              <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+            {% endfor %}
 
           <h2 class="mt-4">Religião</h2><hr>
             <p>Rituais de Vida e Morte
@@ -83,6 +101,12 @@
               Os Tapuias tinham como Deus principal a Constelação da Ursa Maior, para eles um inimigo dos Tapuias o intrigou com o seu Deus, este era a raposa, a causadora de sua expulsão do paraíso. Os tapuias acreditavam na imortalidade da alma desde que a pessoa não tivesse morrido de morte matada ou de picada de serpente.
               Os Tapuias não faziam nada sem antes consultar os feiticeiros e adivinhos. De um modo geral, a religião dos tapuias lembra um pouco as religiões da África, no tocante a influência forte dos feiticeiros na vida indígena. Os europeus viam nos rituais dos tapuias um comércio direto com os poderes do inferno, além disto os tapuias possuíam deuses também que regiam a agricultura, a pesca e a caça, os invocaram e sacrificaram a eles para obter boas colheitas, pesca e caça fartas. Os tapuias tinham uma lenda que falava no Deus da criação, que tinham dois filhos, o mais novo foi embora para a terra, o Deus pai enviou seu filho mais velho para buscar seu filho mais novo, mas este e seus filhos acabaram maltratando e matando o irmão mais velho, que depois de morto ficou na terra, entre seus parentes, por vários dias e somente depois ascendem ao céu, retornando para o seu pai.
               Os europeus acreditavam que o Deus em quem os tapuias falavam era o Deus de Israel, o filho mais velho Jesus Cristo e o filho mais novo seria o próprio Lúcifer ou Caim.</p>
+
+              <h4 class="mt-4">Tribos similares:</h4>
+            {% for n in r_religiao %}
+              <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+            {% endfor %}
+
           
           <h2 class="mt-4">Localização e População</h2><hr>
             <p>A Vida Amorosa dos Tapuias
@@ -96,6 +120,11 @@
               Encontram-se num processo adiantado de aculturação; incorporam elementos culturais da sociedade nacional, sistema de trabalho, organização econômica, casamento com pessoas de fora da comunidade (casamentos interétnicos); e conservam a noção de pertença às origens indígenas.
               
               </p>
+
+              <h4 class="mt-4">Tribos similares:</h4>
+            {% for n in r_locpop %}
+              <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+            {% endfor %}
           
           <h2 class="mt-4">Dieta Alimentar</h2><hr>
             <p>Os tapuias levavam uma vida descuidosa. Não semeavam, não plantavam, nem se esforçavam por coisa alguma. Alimentavam-se com mel de abelhas e maribondos e com todas as imundícies da terra, como cobras e lagartos. Os tapuias armavam ciladas aos peixes e animais, utilizando seu admirável olfato e sua habilidade para comer. Alimentavam-se ainda de frutos agrestes, caça fresca, peixes, tudo sem temperos ou condimentos. Não semeavam outra coisa além da mandioca.
@@ -104,59 +133,15 @@
             Os Jovens caçadores presenteavam os velhos da tribo com caças e pescarias, sem sequer comer um único pedaço. Durante o período de caça e pesca, comiam uma sopa muito rala, feita com farinha de milho ou mandioca. Depois dessa temporada, estavam magros, por razão do intenso trabalho e da alimentação inadequada. 
 
             </p>
-          
+             <h4 class="mt-4">Tribos similares:</h4>
+            {% for n in r_dieta %}
+              <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+            {% endfor %}
 
          
 
         </div>
 
-        <!-- Sidebar Widgets Column -->
-        <div class="col-md-4">
-
-          <!-- Categories Widget -->
-          <div class="card my-4">
-            <h5 class="card-header">Links</h5>
-            <div class="card-body">
-              <div class="row">
-                <div class="col-lg-6">
-                  <ul class="list-unstyled mb-0">
-                    <li>
-                      <a href="#">Web Design</a>
-                    </li>
-                    <li>
-                      <a href="#">HTML</a>
-                    </li>
-                    <li>
-                      <a href="#">Freebies</a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="col-lg-6">
-                  <ul class="list-unstyled mb-0">
-                    <li>
-                      <a href="#">JavaScript</a>
-                    </li>
-                    <li>
-                      <a href="#">CSS</a>
-                    </li>
-                    <li>
-                      <a href="#">Tutorials</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Side Widget -->
-          <div class="card my-4">
-            <h5 class="card-header">Fotos</h5>
-            <div class="card-body">
-              You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
-            </div>
-          </div>
-
-        </div>
 
       </div>
       <!-- /.row -->

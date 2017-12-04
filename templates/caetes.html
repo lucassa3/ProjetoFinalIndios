@@ -61,10 +61,21 @@
             Jerônimo de Albuquerque, certa vez, mandou colocar na boca de canhões, alguns índios prisioneiros e dispará-los á vista dos demais para que os mesmos voassem em pedaços. À bala e o fogo despovoou inteiramente as terras litorâneas e os que escaparam nunca mais tentaram enfrentar o colonizador, tendo que se adaptarem os novos rumos determinados pela ocupação branca.
             Em nossa terra o civilizador plantou definitivamente suas raízes com a instalação do povoado de São Miguel.</p>
 
+            <h4 class="mt-4">Tribos similares:</h4>
+            {% for n in r_historia %}
+              <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+            {% endfor %}
+
           <h2 class="mt-4">Lingua</h2><hr>
             <p>A linguagem era um tanto mal entendida, pois era trêmula, e cantada, não se entendia nada. Dezenas de palavras foram usadas na linguagem dos tapuias como por exemplo; carfa, caruatá, cayú, comatyn, corpamba, corraveara, cucuraí, ditre, entre outros.
               Assim, por exemplo, segundo o jesuíta Jácome Monteiro, escrevendo no início do século XVII, foram os heróis civilizadores que estabeleceram a distinção entre Tupis e Tapuias: “Dizem mais que este Maíra Tupã dividiu entre eles as línguas para que tivessem guerra com os Tapuias, mas não sabem dar a razão delas” (apud Leite, 1938-50, 8:408).
               Se é nos primeiros relatos e crônicas coloniais que se encontra esta clara distinção entre grupos da “língua geral” e “tapuias”, esta visão foi aprimorada pelos historiadores e escritores do século XIX, que tomavam o Tupi do século XVI como símbolo maior da nacionalidade. Não é difícil identificar os contrapontos deste Tupi idealizado: além do onipresente escravo africano e mulato, encontramos também uma legião de Botocudos, Coroados e Bugres, abordada pela expansão pós-colonial e pelos cientistas estrangeiros. Nas palavras de Manuela Carneiro da Cunha, “o que os Tupi- Guarani são para a nacionalidade, os Botocudos são para a ciência” (Carneiro da Cunha, 1992, 136). Em São Paulo, era praticamente unânime o consenso em torno da insignificância do Tapuia, “que contingente quase nulo forneceram à nossa constituição de povo” (Freitas, 1936, 29-30).</p>
+
+              <h4 class="mt-4">Tribos similares:</h4>
+            {% for n in r_lingua %}
+              <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+            {% endfor %}
+
             
           <h2 class="mt-4">Cultura</h2><hr>
             <p>Os índios desta tribo praticavam o antropofagia ritual e, supostamente, consumiram o primeiro bispo do Brasil, dom Pero Fernandes Sardinha, cujo navio em que regressava a Portugal naufragou nas costas da foz do rio Coruripe, junto a outros cem náufragos.
@@ -73,9 +84,20 @@
             Pesquisas recentes colocam em dúvida se o bispo Pero Sardinha teria mesmo sido devorado pelos Caetés. O verdadeiro motivo da morte do primeiro bispo do Brasil poderia ter sido a vingança do Governador Geral, Duarte da Costa, e de seu filho Álvaro da Costa, que poderiam ter tramado tal crime e incriminado os caetés.
             Álvaro da Costa, homem violento, que usava da força para intimidar principalmente os índios, se relacionava sexualmente com as indígenas. Durante um de seus sermões, o bispo Sardinha teria condenado as ações de Álvaro da Costa, o que resultou no início de um conflito entre o bispo e o governador-geral.</p>
 
+            h4 class="mt-4">Tribos similares:</h4>
+            {% for n in r_cultura %}
+              <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+            {% endfor %}
+
 
           <h2 class="mt-4">Religião</h2><hr>
             <p>Sua religião era baseada em principio, adoravam um deus que se chamava tupã, respeitavam com veneração a lua e o sol,também acreditavam em seres sobrenaturais, como caipora, a coruja considerada por eles de mau agouro, tinham no pajé o elemento de ligação entre eles e a divindade era também o médico e o curandeiro.</p>
+
+            <h4 class="mt-4">Tribos similares:</h4>
+            {% for n in r_religiao %}
+              <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+            {% endfor %}
+
           
           <h2 class="mt-4">Localização e População</h2><hr>
             <p>Na caça usavam o alçapão para pegar passarinhos, e a arapuca para pegar animais quadrúpedes e ainda o arco e a flecha.Na pesca usavam a rede de pesca, a linha de anzol feita de osso, o arpão e a própria flecha.Comiam também frutas e raízes (batata, inhame e macaxeira), peixes assados sobre brasa ou moqueados.
@@ -92,6 +114,11 @@
             Álvaro da Costa, homem violento, que usava da força para intimidar principalmente os índios, se relacionava sexualmente com as indígenas. Durante um de seus sermões, o bispo Sardinha teria condenado as ações de Álvaro da Costa, o que resultou no início de um conflito entre o bispo e o governador-geral.
               
               </p>
+
+              <h4 class="mt-4">Tribos similares:</h4>
+            {% for n in r_locpop %}
+              <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+            {% endfor %}
           
           <h2 class="mt-4">Dieta Alimentar</h2><hr>
             <p> Dentre frutos e comidas vindas da terra, da pesca e da colheita, o indios caetes tinham uma pratica diferente: o canibalismo. 
@@ -99,57 +126,12 @@
 
 
             </p>
-          
+            <h4 class="mt-4">Tribos similares:</h4>
+            {% for n in r_dieta %}
+              <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+            {% endfor %}
 
          
-
-        </div>
-
-        <!-- Sidebar Widgets Column -->
-        <div class="col-md-4">
-
-          <!-- Categories Widget -->
-          <div class="card my-4">
-            <h5 class="card-header">Links</h5>
-            <div class="card-body">
-              <div class="row">
-                <div class="col-lg-6">
-                  <ul class="list-unstyled mb-0">
-                    <li>
-                      <a href="#">Web Design</a>
-                    </li>
-                    <li>
-                      <a href="#">HTML</a>
-                    </li>
-                    <li>
-                      <a href="#">Freebies</a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="col-lg-6">
-                  <ul class="list-unstyled mb-0">
-                    <li>
-                      <a href="#">JavaScript</a>
-                    </li>
-                    <li>
-                      <a href="#">CSS</a>
-                    </li>
-                    <li>
-                      <a href="#">Tutorials</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Side Widget -->
-          <div class="card my-4">
-            <h5 class="card-header">Fotos</h5>
-            <div class="card-body">
-              You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
-            </div>
-          </div>
 
         </div>
 

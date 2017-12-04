@@ -58,9 +58,20 @@
               Houve ataques pelos Matsés por volta de 1960 e os Marúbo responderam por matar 14 deles (Melatti 1998). Os índios das duas comunidades nos rios Curuçá e Ituí continuaram tirarem o látex e o vender aos regatões, e protestaram quando o governo tentou fechar os rios ao comércio. A FUNAI entrou a região em 1974, e quando esta demorou fazer uma pista de pouso para os teco teco dos missionários eles mesmos brocaram o mato para fazê-la (Hemming 2003.539).
               
               São um dos povos maiores e influentes da Terra Indígena do Vale Javari e envolvidos no Conselho Indígena (CIVJA) que fornece assistência médica. Seus inimigos são os Matsés, mas têm bons relacionamentos com os Matis e jogam futebol com eles e os ajudam nas roças. A MNTB tem uma escola e alguns alunos assistem as escolas secundárias em Atalaia e Cruzeiro do Sul (Anonby e Holbrooks 2010.12).</p>
+
+              <h4 class="mt-4">Tribos similares:</h4>
+            {% for n in r_historia %}
+              <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+            {% endfor %}
           
           <h2 class="mt-4">Lingua</h2><hr>
             <p>Marúbo (DAI/AMTB 2010) da família linguística Pano norte central. Não parece ser inter inteligível com Matsés (SIL). Os Marúbo dizem que a língua é dos Chaináwavo, uma etnia extinta. Os jovens falam português (Melatti 1998).</p>
+
+            <h4 class="mt-4">Tribos similares:</h4>
+            {% for n in r_lingua %}
+              <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+            {% endfor %}
+
         
           <h2 class="mt-4">Cultura</h2><hr>
             <p>Os marubos não diferem essencialmente dos demais povos pano dessa região sendo que, como assinala Dan James Pantone [6] foram os primeiros povos indígenas do vale do Javari a fazer contato com estranhos na virada do século XX sendo por conseguinte, em detrimento de outras tribos do Vale, os primeiros a ter acesso a armas de fogo adquirindo poder e capacidade de dominar todas as outras tribos do Javari.
@@ -68,68 +79,43 @@
               Segundo Júlio César Melatti[7], entre os marubos, há dois tipos de agentes da magia. Um deles, que entra em transe e recebe em seu corpo espíritos de outras camadas do universo enquanto sua própria alma visita essas camadas, exerce mais do que atividades de cura, uma vez o simples contato com esses seres já é razão suficiente para procurar comunicação com eles. O outro tipo é constituído por aqueles que entoam cânticos de cura sobre os doentes. Ambos os tipos fazem uso da ayahuasca e do rapé de tabaco.
               Ainda segundo Melatti, para os marubos o universo é constituído de várias camadas terrestres, das quais a superior é aquela onde vivemos, e várias camadas celestes. Para os seres humanos talvez a camada celeste mais importante seja a segunda, contando-se de baixo par cima, pois é para lá que devem se dirigir suas almas após a morte, através do percurso de um caminho cheio de perigos, a cujos obstáculos aqueles que não seguiram as regras sociais sucumbem. Observe-se a concepção do não cumprimento das regras sociais associado à morte e adoecimento. As doenças na concepção marubo, conforme os cânticos de cura, se formam de partes de outros seres (mítico membros e órgãos e pedaços de animais abatidos por um herói mítico).</p>
 
+              h4 class="mt-4">Tribos similares:</h4>
+            {% for n in r_cultura %}
+              <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+            {% endfor %}
+
           <h2 class="mt-4">Religião</h2><hr>
             <p>Somente os homens mais maduros usamo rapé e a ayahuasca (caapi). Realizam a festa da colheita do milho. Qualquer homem maduro pode entoar os cânticos de cura, tomando ayahuasca e rapé, sentado em redor do doente. Há também praticantes especiais para fazer isso. Os cânticos narram a origem do doente de outros seres e como a doença entrou o corpo e invocam outros seres para entrar no copro para combatê-la. Outra cura é por comer um mingau, sobre o qual foram entoados os cânticos. O pajé através de tomar ayahuasca pode receber os espíritos no seu corpo e visitar as casas dos espíritos benevolentes com a finalidade de curar ou achar coisas perdidas (Melatti 1998).
               
               O transporte para a maloca de um novo trocano (instrumento de percussão constituído de um tronco de madeira com uma cavidade retangular profunda) tem seu ritual (Melatti 1998). Praticam curas de pajelança e cerimonias fúnebres (Anonby e Holbrooks 2010.12). O rito fúnebre no passado era de cremação e pulverização dos ossos e a ingestão das cinzas dentro de uma comida pastosa, com fazem os Yanomami. Hoje os cadáveres estão levado bem fora da aldeia e enterrados na sua rede. Um tapiri é construído sobre a cova (Melatti 1998).</p>
 
+              <h4 class="mt-4">Tribos similares:</h4>
+            {% for n in r_religiao %}
+              <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+            {% endfor %}
+
+
           <h2 class="mt-4">Localização e População</h2><hr>
             <p>Possuem população de aproximadamente 1300 pessoas e vivem em maior parte na terra indigena do vale do javari , homologada e registrada no CRI e SPU com 8.544.48 ha nas cabeceiras dos rios Itui, Arrojo e Curuça em quatro aldeias e em Atalaia do Norte (Anonby e Holbrook 2010.10). População: 3.759 de 13 etnias. Os assentimentos com sua população estão situados: No rio Ituí logo acima da foz do rio Novo de Cima (88 em 1998). Nas cabeceiras do rio Ituí até acima da foz do Paraguaçu, com uma aldeia ao lado da missão Vida Nova (380 em 1998). No rio Curuçá entre as confluências do rio Pardo e do rio Arrojo (182 em 1998). No Igarapé Maronal, afluente do alto Curuçá (231 em 1998) (Maletti 1998).</p>
+
+            <h4 class="mt-4">Tribos similares:</h4>
+            {% for n in r_locpop %}
+              <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+            {% endfor %}
       
           <h2 class="mt-4">Dieta Alimentar</h2><hr>
             <p>Vivam por agricultura de coivara, cultivando milho, mandioca, banana, papaia, goiabada, algodão, mamões e tabaco.</p>
+
+            </p>
+            <h4 class="mt-4">Tribos similares:</h4>
+            {% for n in r_dieta %}
+              <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+            {% endfor %}
           
           <hr>
 
         </div>
 
-        <!-- Sidebar Widgets Column -->
-        <div class="col-md-4">
-
-          <!-- Categories Widget -->
-          <div class="card my-4">
-            <h5 class="card-header">Links</h5>
-            <div class="card-body">
-              <div class="row">
-                <div class="col-lg-6">
-                  <ul class="list-unstyled mb-0">
-                    <li>
-                      <a href="#">Web Design</a>
-                    </li>
-                    <li>
-                      <a href="#">HTML</a>
-                    </li>
-                    <li>
-                      <a href="#">Freebies</a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="col-lg-6">
-                  <ul class="list-unstyled mb-0">
-                    <li>
-                      <a href="#">JavaScript</a>
-                    </li>
-                    <li>
-                      <a href="#">CSS</a>
-                    </li>
-                    <li>
-                      <a href="#">Tutorials</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Side Widget -->
-          <div class="card my-4">
-            <h5 class="card-header">Fotos</h5>
-            <div class="card-body">
-              You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
-            </div>
-          </div>
-
-        </div>
 
       </div>
       <!-- /.row -->

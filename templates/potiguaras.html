@@ -52,9 +52,20 @@
           <!-- Post Content -->
           <h2 class="mt-4">Historia</h2><hr>
             <p>No século XVI, os potiguaras somavam aproximadamente 90 000 indivíduos. Eram grandes canoeiros e combateram os invasores portugueses.[4] Falavam a língua tupi antiga e celebravam os ritos que compunham a mitologia tupi.[6] Vários descendentes da tribo dos potiguares adotaram, ao serem submetidos ao batismo cristão, o sobrenome "Camarão", sendo o mais célebre destes o combatente Filipe Camarão (1580/1600-1648), considerado um dos maiores ameríndios da história luso-americana, já que foi decisivo, a exemplo do luso-paraibano André Vidal de Negreiros, na grandiosa vitória contra os neerlandeses durante a Insurreição Pernambucana (1645-1649).</p>
+
+            <h4 class="mt-4">Tribos similares:</h4>
+            {% for n in r_historia %}
+              <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+            {% endfor %}
           
           <h2 class="mt-4">Lingua</h2><hr>
             <p>Conforme documentos históricos, nunca houve um consenso que determinasse a língua/grafia dos potiguaras. Apesar disto, a tribo dos índios potiguaras fazem parte da família Tupi-Guarani, utilizando como idioma o português (idioma falado pela maioria das tribos do nordeste).</p>
+
+            <h4 class="mt-4">Tribos similares:</h4>
+            {% for n in r_lingua %}
+              <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+            {% endfor %}
+
           
           <h2 class="mt-4">Religião</h2><hr>
             <p>Originalmente praticantes da religião tupi, atualmente muitos potiguaras são cristãos (católicos, batistas, betéis, fiéis da Assembléia de Deus, da Igreja Universal do Reino de Deus, Brasil para Cristo, dentre outras) ou optam por práticas espirituais ancestrais que veneram entidades e realizam rituais ligados à macumba, ao catimbó e à jurema.
@@ -69,6 +80,12 @@
               
               No entanto, nem todos os índios assumem tais práticas como legítimas devido a fatores como a conversão religiosa, em que os conceitos de saúde, doença e cura são expressos geralmente através das interpretações oficiais das igrejas.</p>
 
+              <h4 class="mt-4">Tribos similares:</h4>
+            {% for n in r_religiao %}
+              <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+            {% endfor %}
+
+
           <h2 class="mt-4">Localização e População</h2><hr>
             <p>Os Potiguara tinham em 2004 uma população estimada em 10.837 habitantes (Funasa), distribuída em 32 aldeias nos municípios de Baía da Traição, Marcação e Rio Tinto e nas áreas urbanas de Baía da Traição (1.058 pessoas) e de Marcação (648).
               
@@ -81,62 +98,26 @@
               Na segunda metade do século XVIII, a situação das aldeias missionárias vai ser modificada pelo diretório pombalino que determina a expulsão das ordens missionárias e a elevação das aldeias à categoria de vilas de índios. O aldeamento de São Miguel de Baía da Traição passou a ser chamado de Vila de São Miguel da Baía da Traição e o aldeamento de Preguiça, Vila Nossa Senhora dos Prazeres de Monte-Mór.
               
               Assim, os Potiguara ocupam dois extremos opostos da história política local. De um lado, os Potiguara de Baía da Traição que tiveram sua presença oficializada na década de 1930 do século XX, sendo marcados pela política indigenista nacional. De outro, os Potiguara de Monte-Mór, que foram reconhecidos apenas no início do século XXI, mas que ainda sofrem perseguições e violências dos invasores.</p>
+
+              <h4 class="mt-4">Tribos similares:</h4>
+            {% for n in r_locpop %}
+              <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+            {% endfor %}
           
 
           <h2 class="mt-4">Dieta Alimentar</h2><hr>
             <p>As principais fontes alimentares provém da agricultura e da pesca, destacando-se a produçao e o consumo da farinha de mandioca e de mariscos, crustáceos e peixes. O consumo de alimentos industrializados (entre eles a carne de charque e embutidos) é frequente. A farinha de mandioca é utilizada também como produto de troca pór outros produtos alimentícios, na falta de moeda circulante. A existência de inúmeros pomares naturais (mangaba e cajú) e plantados possibilita o consumo de frutas.</p>
+
+            </p>
+            <h4 class="mt-4">Tribos similares:</h4>
+            {% for n in r_dieta %}
+              <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+            {% endfor %}
             
           <hr>
 
         </div>
 
-        <!-- Sidebar Widgets Column -->
-        <div class="col-md-4">
-
-          <!-- Categories Widget -->
-          <div class="card my-4">
-            <h5 class="card-header">Links</h5>
-            <div class="card-body">
-              <div class="row">
-                <div class="col-lg-6">
-                  <ul class="list-unstyled mb-0">
-                    <li>
-                      <a href="#">Web Design</a>
-                    </li>
-                    <li>
-                      <a href="#">HTML</a>
-                    </li>
-                    <li>
-                      <a href="#">Freebies</a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="col-lg-6">
-                  <ul class="list-unstyled mb-0">
-                    <li>
-                      <a href="#">JavaScript</a>
-                    </li>
-                    <li>
-                      <a href="#">CSS</a>
-                    </li>
-                    <li>
-                      <a href="#">Tutorials</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Side Widget -->
-          <div class="card my-4">
-            <h5 class="card-header">Fotos</h5>
-            <div class="card-body">
-              You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
-            </div>
-          </div>
-
-        </div>
 
       </div>
       <!-- /.row -->

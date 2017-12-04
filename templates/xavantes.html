@@ -53,9 +53,20 @@
           <h2 class="mt-4">Historia</h2><hr>
             <p>Houve tentativas de integração com a sociedade brasileira em meados do século XIX, mas optaram por distanciar-se, migrando entre 1830 e 1860 em direção ao atual estado do Mato Grosso, onde viveram sem serem intensivamente assediados até a década de 1930. Em 1982, o cacique xavante Mário Juruna tornou-se o primeiro indígena brasileiro a se eleger deputado federal no país. Na década de 1990, os xavantes tiveram várias experiências novas com os "estrangeiros", como: um intercâmbio realizado com a Alemanha; a implementação de um projeto de educação bilíngue; e uma parceria musical com a banda de heavy metal Sepultura em seu álbum "Roots".</p>
 
+            <h4 class="mt-4">Tribos similares:</h4>
+            {% for n in r_historia %}
+              <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+            {% endfor %}
+
           <h2 class="mt-4">Lingua</h2><hr>
             <p>O povo indígena Xavante pertence linguisticamente ao tronco Macro-Jê, da família linguística Jê. Sua língua é chamada akwén ou aquém (também grafada “acuen”). A língua Xavante contém 13 consoantes e 13 vogais – das quais quatro são nasais. Termos de honra e carinho são usados com referência a outros, como os parentes por afinidade e os netos. Muitos destes relacionamentos chaves são atualmente refletidos na gramática da língua. Por exemplo, ao falar diretamente ao genro, um homem usará a forma gramática indireta (terceira pessoa) em vez das formas da segunda pessoa.</p>
             
+            <h4 class="mt-4">Tribos similares:</h4>
+            {% for n in r_lingua %}
+              <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+            {% endfor %}
+
+
           <h2 class="mt-4">Cultura</h2><hr>
             <p>A característica mais marcante da sociedade Xavante pode ser a sua feição dualista: a divisão da tribo inteira em dois clãs – âwawe e po’reza’õno. Permite-se o casamento somente entre membros de clãs opostos.</p>
 
@@ -67,15 +78,31 @@
 
             <p>O Ritual de furo de orelha acontece na passagem da adolescência para a vida adulta. Após os cinco anos de reclusão, acontece uma festa na aldeia, chamada Danhono, onde a orelha dos jovens é furada com um osso de onça parda. Após o ritual, os jovens passam a ser considerados adultos e voltam ao convívio social com a tribo.</p>
 
+            h4 class="mt-4">Tribos similares:</h4>
+            {% for n in r_cultura %}
+              <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+            {% endfor %}
+
           <h2 class="mt-4">Religião</h2><hr>
             <p>Na religião da tribo Xavante, assim como em outras tribos pertencentes ao grupo Jê, encontra-se a ideia generalizada de um Ser Supremo, muitas vezes com características de herói civilizador, e não raramente identificado com o Sol, que é chamado de “nosso criador”. Existe também a crença nas almas dos homens, dos animais, das plantas etc. As almas dos homens não sobem ao céu, depois da morte, mas vivem na terra, nos lugares em que os corpos foram enterrados, transformando-se em outros seres ou em fantasmas.</p>
 
             <p>A religião deste povo indígena é baseada no politeísmo, isto é, na crença em mais de um deus. Para os xavantes, o mundo foi criado a partir de uma dupla de entidades (Parinaiá), que seria responsável pela criação de tudo o que existe atualmente.</p>
 
             <p>Um exemplo de ritual religioso é o casamento. Entre os xavantes, são os pais que escolhem os cônjuges para seus filhos. Assim que um grupo de homens termina sua cerimônia de iniciação, realiza-se uma cerimônia coletiva de casamento. As mães trazem suas filhas, ainda meninas, e deitam-nas ao lado de seus noivos, que cobrem as faces e estão de costas para elas. As meninas ficam pouco tempo nesta posição, sendo retiradas em seguida. Depois são servidos, aos convidados, bolos de milho, preparados com o milho cultivado na casa dos pais dos noivos e das noivas. O rapaz deve esperar que sua noiva cresça para poder morar com ela. Após o nascimento de seu primeiro filho, o homem passa a morar definitivamente na casa da família da esposa.</p>
+
+            <h4 class="mt-4">Tribos similares:</h4>
+            {% for n in r_religiao %}
+              <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+            {% endfor %}
+
           
           <h2 class="mt-4">Localização e População</h2><hr>
             <p> Os Xavante somavam, em 2007, cerca de 13.000 pessoas abrigadas em diversas Terras Indígenas que constituem parte do seu antigo território de ocupação tradicional há pelo menos 180 anos, na região compreendida pela Serra do Roncador e pelos vales dos rios das Mortes, Kuluene, Couto de Magalhães, Batovi e Garças, no leste matogrossense. Afora as Terras Indígenas Chão Preto e Ubawawe que são contíguas a TI Parabubure, as demais terras xavante - Marechal Rondom, Maraiwatsede, São Marcos, Pimentel Barbosa, Areões e Sangradouro/Volta Grande - são geograficamente descontínuas. Localizadas em meio a um conjunto de bacias hidrográficas responsáveis pela rica biodiversidade regional e, portanto, base do modo de vida tradicional indígena, essa região vem sofrendo impactos ambientais (dificilmente reversíveis) desde a década de 1960 devido à sua incorporação pela agropecuária extensiva, processo intensificado a partir da década de 1980 pela crescente implementação da produção de grãos para exportação, em especial, a soja.</p>
+
+            <h4 class="mt-4">Tribos similares:</h4>
+            {% for n in r_locpop %}
+              <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+            {% endfor %}x
           
           <h2 class="mt-4">Dieta Alimentar</h2><hr>
             <p>Os Xavante habitam a zona central do cerrado brasileiro em uma complexa eco-zona que combina cerrado e mata de galeria. Trata-se de uma região marcada por duas estações bastante definidas: a época da seca denominada regionalmente como “inverno” – que compreende os meses de abril a outubro - e a época das chuvas (“verão”), compreendendo os demais meses do ano. O cultivo agrícola, sobretudo de milho (o alimento de maior destaque em termos cerimoniais e sócio-cosmológicos xavante), feijão e abóbora, desempenha um papel apenas secundário na economia. Os produtos da colheita das roças pertencem exclusivamente a cada um dos grupos domésticos – portanto, cada habitação, uma roça - e as tarefas de derrubada e queimada cabem aos homens, enquanto o plantio, às mulheres. A dieta básica tradicional consiste em produtos coletados principalmente pelas mulheres: raízes silvestres, castanhas, frutos e outros vegetais.</p>
@@ -83,59 +110,19 @@
             <p>A coleta é suplementada por itens fornecidos pelos homens: carnes de caça e alguma quantidade de peixe, fontes de proteína que podem ser defumadas para fins de conservação. Até o início da intensificação da colonização na 1960, os Xavante obtinham esses alimentos em excursões de caça e coleta: longas viagens, que chegavam a durar alguns meses cada uma, nas quais grupos de famílias extensas iam em busca dos recursos naturais da região. Na estação seca, a fim de conduzir atividades cerimoniais, os grupos de viajantes se reuniam em grandes aldeias semi-permanentes.</p>
 
             <p>As carnes de caça ocupam uma posição proeminente na dieta e na vida social. Para os homens, a caça é tanto um afazer econômico importante como um marcador de capacidades masculinas, já que é através dela que se expressam as habilidades de resistência física, rapidez, agilidade, vigilância e agressividade. Ela é componente central de alguns cerimoniais, como o Wai’a, e das celebrações de casamentos, nas quais grupos de homens saem em caçadas prolongadas. A degradação ambiental, resultado da criação de gado e do monocultivo agrícola no interior e no entorno das terras xavante, diminuiu fortemente o estoque de fauna cinegética disponível. As carnes e os pescados, principais fontes protéicas, são escassos na maioria das áreas xavante atuais; nas menores delas, a carência de caça é severa. Além disso, como as atuais terras dos Xavante não representam mais do que pequenos fragmentos da extensão total de que eles antes dispunham para sua subsistência, encontrar um suficiente número de presas – especialmente para cerimoniais como casamentos, que requerem grandes quantidades de carne – é algo que leva os grupos de caçadores indígenas a adentrar as fazendas particulares com freqüência, tanto para exercitar suas caçadas como para demandar junto aos fazendeiros cabeças de gado. Essa situação, em muitos casos, resulta em graves conflitos com regionais.</p>
+
+            </p>
+            <h4 class="mt-4">Tribos similares:</h4>
+            {% for n in r_dieta %}
+              <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+            {% endfor %}
           
 
          
 
         </div>
 
-        <!-- Sidebar Widgets Column -->
-        <div class="col-md-4">
 
-          <!-- Categories Widget -->
-          <div class="card my-4">
-            <h5 class="card-header">Links</h5>
-            <div class="card-body">
-              <div class="row">
-                <div class="col-lg-6">
-                  <ul class="list-unstyled mb-0">
-                    <li>
-                      <a href="#">Web Design</a>
-                    </li>
-                    <li>
-                      <a href="#">HTML</a>
-                    </li>
-                    <li>
-                      <a href="#">Freebies</a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="col-lg-6">
-                  <ul class="list-unstyled mb-0">
-                    <li>
-                      <a href="#">JavaScript</a>
-                    </li>
-                    <li>
-                      <a href="#">CSS</a>
-                    </li>
-                    <li>
-                      <a href="#">Tutorials</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Side Widget -->
-          <div class="card my-4">
-            <h5 class="card-header">Fotos</h5>
-            <div class="card-body">
-              You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
-            </div>
-          </div>
-
-        </div>
 
       </div>
       <!-- /.row -->

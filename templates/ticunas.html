@@ -62,15 +62,37 @@
               A partir da demarcação das terras ticunas, em 1992, vários grupos que viviam em outras terras indígenas se deslocaram para a terra ticuna, motivados pela aproximação com sua história, com os valores de seu povo, com a floresta e a Natureza. Os ticunas criaram aldeias em regiões de igarapés, e afastaram-se dos não-índios e seus bens mercantis. A volta aos igarapés, mais estreitos do que os rios, permitiu ao povo Tikuna fiscalizar melhor a pesca predatória, comum no Solimões e controlada pelos proprietários de grandes barcos pesqueiros.
               
               Normalmente, as aldeias ribeirinhas se dividem em bairros clânicos sob comando moral de um ancião, um modelo adaptado do ambiente endogâmico tradicional do "pai da casa". Os Ticuna realizam rituais xamânicos e praticam a residência uxorilocal, pela qual os novos casais habitam junto à família da esposa.</p>
+
+              <h4 class="mt-4">Tribos similares:</h4>
+            {% for n in r_historia %}
+              <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+            {% endfor %}
           
           <h2 class="mt-4">Lingua</h2><hr>
             <p>Os Ticunas têm sua própria língua, de mesmo nome, classificada como língua tonal e geneticamente isolada, de fonologia e sintaxe complexas. Há mais de 30 mil falantes no Brasil, Colômbia e Peru. No lado brasileiro, o Ticuna é falado em mais de cem aldeias e nove municípios, inclusive em aldeias próximas às cidades ou em que há falantes de outras línguas. Os Ticuna em trânsito nas cidades dos municípios onde se situam suas aldeias usam a língua Ticuna entre si e com os que ali se fixaram. Os filhos dos que se fixaram nas cidades usam com frequência a língua Ticuna com seus pais. Em casos raros, a língua cede lugar ao português. Já os que se deslocaram para Manaus sofrem uma imposição muito mais forte do português.</p>
+
+            <h4 class="mt-4">Tribos similares:</h4>
+            {% for n in r_lingua %}
+              <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+            {% endfor %}
+
           
           <h2 class="mt-4">Cultura</h2><hr>
             <p>Os Ticunas acreditam que foram pescados por Yo'i (um dos principais heróis culturais) das águas vermelhas do igarapé Eware. Por isso, se denominam Magüta, ou "povo pescado com vara" (de Magü, "pescar com vara" e o sufixo indicativo de coletivo -ta). Depois de pescados, o povo Magüta passou a residir na montanha Taiwegüne, nos arredores da casa de Yo'i, lugar sagrado para os atuais Ticuna.</p>
 
+            h4 class="mt-4">Tribos similares:</h4>
+            {% for n in r_cultura %}
+              <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+            {% endfor %}
+
           <h2 class="mt-4">Religião</h2><hr>
             <p>No meio dos índios Ticunas não tem uma religião definida, sendo que Curt Nimuendaju eMaurício Vinhas de Queiroz foram os primeiros pesquisadores a observar a existência de traçosde movimentos messiânicos entre os Ticuna. Segundo eles, houve sete manifestações deste tipoentre estes índios do princípio do século XX até 1961.</p>
+
+            <h4 class="mt-4">Tribos similares:</h4>
+            {% for n in r_religiao %}
+              <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+            {% endfor %}
+
 
           <h2 class="mt-4">Localização e População</h2><hr>
             <p>“De acordo com seus mitos, os Ticuna são originários do igarapé Eware, situado nas nascentes do igarapé São Jerônimo (Tonatü), tributário da margem esquerda do rio Solimões, no trecho entre Tabatinga e São Paulo de Olivença. Ainda hoje é essa a área de mais forte concentração de Ticuna, onde estão localizadas 42 das 59 aldeias existentes” (Oliveira, 2002: 280).
@@ -80,6 +102,11 @@
               No início, mantiveram sua tradicional distribuição espacial em malocas clânicas e, na década de 1970, havia mais de cem aldeias. Hoje, essa distribuição das aldeias ticuna se modificou substancialmente. Sabe-se ainda que alguns índios desceram o rio até Tefé e outros municípios do médio Solimões, outros se fixaram no município de Beruri, no baixo curso do Solimões, bastante próximo à cidade de Manaus.
               
               No alto Solimões, contudo, os Ticuna são encontrados em todos os seis municípios da região, a saber: Tabatinga, Benjamim Constant, São Paulo de Olivença, Amaturá, Santo Antônio do Içá e Tonantins. Sua população está distribuída em mais de 20 Terras Indígenas.</p>
+
+              <h4 class="mt-4">Tribos similares:</h4>
+            {% for n in r_locpop %}
+              <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+            {% endfor %}
       
           <h2 class="mt-4">Dieta Alimentar</h2><hr>
             <p>A dieta alimentar é composta basicamente de peixe com farinha de mandioca. O preparo do peixe, quase diário, é feito principalmente de duas formas. Os diferentes tipos de peixe são cozidos (o seu caldo é bastante apreciado por todos). Depois de comer o peixe cozido com muita farinha de mandioca, os Ticuna costumam tomar vários pratos do caldo, como se fosse uma sopa. Também é muito comum fazer o peixe assado (moqueado) e comê-lo acompanhado de um pratinho de sal colocado ao lado, onde todos molham o dedo.
@@ -93,56 +120,14 @@
               Todos esses produtos são, em geral, trazidos pelos regatões que passam pelas localidades. Esta transação é feita normalmente a partir da troca da farinha que produzem e das galinhas que criam. Algumas vezes, tais produtos são comprados.
               
               As famílias com mais recursos fazem suas compras nas cidades mais próximas. Algumas compram em grandes quantidades para revender mais tarde na aldeia, formando assim casas "armarinhos", com produtos como pilhas ou linha de costura.</p>
+
+              </p>
+            <h4 class="mt-4">Tribos similares:</h4>
+            {% for n in r_dieta %}
+              <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+            {% endfor %}
           
           <hr>
-
-        </div>
-
-        <!-- Sidebar Widgets Column -->
-        <div class="col-md-4">
-
-          <!-- Categories Widget -->
-          <div class="card my-4">
-            <h5 class="card-header">Links</h5>
-            <div class="card-body">
-              <div class="row">
-                <div class="col-lg-6">
-                  <ul class="list-unstyled mb-0">
-                    <li>
-                      <a href="#">Web Design</a>
-                    </li>
-                    <li>
-                      <a href="#">HTML</a>
-                    </li>
-                    <li>
-                      <a href="#">Freebies</a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="col-lg-6">
-                  <ul class="list-unstyled mb-0">
-                    <li>
-                      <a href="#">JavaScript</a>
-                    </li>
-                    <li>
-                      <a href="#">CSS</a>
-                    </li>
-                    <li>
-                      <a href="#">Tutorials</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Side Widget -->
-          <div class="card my-4">
-            <h5 class="card-header">Fotos</h5>
-            <div class="card-body">
-              You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
-            </div>
-          </div>
 
         </div>
 

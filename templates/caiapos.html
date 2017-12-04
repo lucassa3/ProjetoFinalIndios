@@ -53,11 +53,22 @@
           <h2 class="mt-4">Historia</h2><hr>
             <p>Ocupantes desde tempos imemoriais da região da bacia inferior do rio Tocantins, no começo do século XIX os caiapós começaram a sofrer ataques dos homens brancos, que mataram e escravizaram muitos caiapós. Ainda que mais numerosos que os invasores, as bordunas dos caiapós nada podiam fazer diante dos mosquetes dos invasores. Como resultado, os caiapós migraram para o oeste. Trinta anos depois, porém, os homens brancos voltaram a atacar os caiapós. Desta vez, houve uma cisão entre os caiapósː uma parte deles queria estabelecer a paz com os homens brancos, e outra parte queria continuar a fuga para o oeste. Os caiapós que optaram pela relação amistosa com os brancos desapareceram, em grande parte vitimados por pestes trazidas pelos brancos. Nas décadas de 1950 e 1960, houve uma tentativa de aproximação por parte de agentes do governo brasileiro com a intenção de pacificar os caiapós. Como resultado, hoje, a maior parte dos caiapós está em contato permanente com a sociedade brasileira.[7] Nos anos 1980, dois caiapós se tornaram conhecidos do grande públicoː Tutu Pombo e Raoni. O primeiro, como o primeiro líder indígena brasileiro a explorar comercialmente as reservas indígenas, ao permitir a extração de ouro e mogno em troca de dinheiro. O segundo, como um defensor do meio ambiente e do modo de vida tradicional indígena.</p>
           
+            <h4 class="mt-4">Tribos similares:</h4>
+            {% for n in r_historia %}
+              <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+            {% endfor %}
+          
           <h2 class="mt-4">Lingua</h2><hr>
             <p>A língua falada pelos Kayapó pertence à família lingüística Jê, do tronco Macro-Jê. Existem diferenças dialetais entre os vários grupos Kayapó decorrentes das cisões que originaram tais grupos, mas em todos eles a língua é uma característica de maior abrangência étnica, levando ao reconhecimento de que participam de uma cultura comum.
               Os Kayapó, para quem a oratória é uma prática social valorizada, se definem como aqueles que falam bem, bonito (Kaben mei), em oposição a todos os grupos que não falam a sua língua.
               Em certas ocasiões, como os discursos do conselho ou cerimoniais, os homens Kayapó falam num tom de voz como se alguém estivesse dando-lhes um golpe na barriga (ben), diferenciando assim esse tipo de oratória da fala comum.
               O grau de conhecimento dos Kayapó do português varia muito de grupo para grupo, conforme a antiguidade do contato e o grau de isolamento em que cada um se encontra.</p>
+
+              <h4 class="mt-4">Tribos similares:</h4>
+            {% for n in r_lingua %}
+              <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+            {% endfor %}
+
         
           <h2 class="mt-4">Cultura</h2><hr>
             <p>Cada comunidade é independente das demais, mas todas apresentam a mesma estrutura. Se constrói uma aldeia com uma praça central para as festas e, ao redor, as casas de cada família. O ngobe é a casa dos homens, situada no extremo norte da praça, onde eles se reúnem, praticam trabalhos artesanais e pernoitam. Os homens se dividem em dois lados, cada um com um benadióro (chefe) e seus oopen (partidários).
@@ -67,68 +78,41 @@
               O matrimônio se contrai em idade precoce, por vezes consentido pelas mães dos noivos, sendo proibida a união entre primos cruzados. Se trata de um evento público que está previsto após a menarca das meninas (entre 10 e 12 anos). As mães e tias dos recém-casados preparam e interrompem sem prejuízos a noite de núpcias. O divórcio é possível, mas o segundo casamento é privado.
               A decoração do corpo é uma questão importante na sociedade. Dedica-se bastante tempo para raspar o cabelo e fazer desenhos coloridos na pele. Homens, mulheres e crianças ficam com a parte superior da cabeça completamente raspada. As mulheres deixam cair para trás o resto do cabelo, enquanto os homens fazem um rolo. Levam grinaldas de penas, brincos, colares e cintos e alguns homens usam um disco em seu lábio inferior. Anteriormente, todos os homens o portavam.</p>
 
+              h4 class="mt-4">Tribos similares:</h4>
+            {% for n in r_cultura %}
+              <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+            {% endfor %}
+
           <h2 class="mt-4">Religião</h2><hr>
             <p>A religião dos índios Caiapós, assim como a de todos indígenas, é animista, - que cultuam elementos do Cosmos (Sol, Lua, estrelas), os elementos da natureza (rio, oceano, montanha, floresta, rocha), os seres vivos (animais, fungos, vegetais) e os fenômenos naturais (chuva, vento, dia, noite)
               
               Segundo sua religião, há um mundo celeste do qual provém a humanidade. Os primeiros seres humanos que chegaram à Terra vieram de lá por uma longa corda, qual formigas por um tronco. Isto foi possível porque um homem viu um tatu e o seguiu até que entrou num buraco, que depois foi usado pelas pessoas para vir a este mundo. Também as plantas celestes baixaram do mundo celestial quando a filha da chuva brigou com a mãe, desceu a este mundo e foi acolhida por um homem, a quem entregou as plantas.</p>
 
+              <h4 class="mt-4">Tribos similares:</h4>
+            {% for n in r_religiao %}
+              <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+            {% endfor %}
+
+
           <h2 class="mt-4">Localização e População</h2><hr>
             <p>Tem população de aproximadamente 9000 indios. A maioria dos Caiapós vive no Planalto Central, nos estados de Mato Grosso e do Pará, no entanto, também são encontrados no Tocantins e em Goiás e está permanecido atualmente na região central do Brasil `` centro - oeste ´´.</p>
+
+            <h4 class="mt-4">Tribos similares:</h4>
+            {% for n in r_locpop %}
+              <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+            {% endfor %}
       
           <h2 class="mt-4">Dieta Alimentar</h2><hr>
             <p>Vivam por agricultura de coivara, cultivando milho, mandioca, banana, papaia, goiabada, algodão, mamões e tabaco.</p>
-          
+        
+            <h4 class="mt-4">Tribos similares:</h4>
+            {% for n in r_dieta %}
+              <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+            {% endfor %}
           <hr>
 
         </div>
 
-        <!-- Sidebar Widgets Column -->
-        <div class="col-md-4">
-
-          <!-- Categories Widget -->
-          <div class="card my-4">
-            <h5 class="card-header">Links</h5>
-            <div class="card-body">
-              <div class="row">
-                <div class="col-lg-6">
-                  <ul class="list-unstyled mb-0">
-                    <li>
-                      <a href="#">Web Design</a>
-                    </li>
-                    <li>
-                      <a href="#">HTML</a>
-                    </li>
-                    <li>
-                      <a href="#">Freebies</a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="col-lg-6">
-                  <ul class="list-unstyled mb-0">
-                    <li>
-                      <a href="#">JavaScript</a>
-                    </li>
-                    <li>
-                      <a href="#">CSS</a>
-                    </li>
-                    <li>
-                      <a href="#">Tutorials</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Side Widget -->
-          <div class="card my-4">
-            <h5 class="card-header">Fotos</h5>
-            <div class="card-body">
-              You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
-            </div>
-          </div>
-
-        </div>
 
       </div>
       <!-- /.row -->

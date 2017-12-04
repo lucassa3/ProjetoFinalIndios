@@ -55,17 +55,33 @@
 
             <p>Sua história de mais de 380 anos de contato foi marcada tanto por aproximações com os brancos como por recusas totais, submissões, revoltas e grandes tragédias. A revolta de 1901 contra os missionários capuchinhos teve como resposta a última "guerra contra os índios" na história do Brasil. Foram também conhecidos por muitos povos brasileiros como os "cuia de aço" por fazerem ferramentas excelentes para o trabalho. Se alimentam principalmente de caça e de frutas cultivadas por eles.</p>
 
+            <h4 class="mt-4">Tribos similares:</h4>
+            {% for n in r_historia %}
+              <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+            {% endfor %}
+
           <h2 class="mt-4">Lingua</h2><hr>
             <p>A língua guajajara pertence à família tupi-guarani, sendo as línguas mais próximas o Asurini (do Tocantins), o Avá (Canoeiro), o Parakanã, o Suruí (do Pará), o Tapirapé e o Tembé, que lhe é muito semelhante. Os guajajara chamam sua língua de ze'egete ("a fala boa").</p>
 
             <p>Ela é subdividida pelos lingüistas em quatro dialetos que são mutuamente inteligíveis, sem maiores complicações. Nas aldeias, o guajajara é falado como primeira língua, enquanto o português tem a função de língua franca, que é entendida pela maioria. A situação sociolingüística dos guajajara que moram nas cidades é desconhecida.</p>
             
+            <h4 class="mt-4">Tribos similares:</h4>
+            {% for n in r_lingua %}
+              <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+            {% endfor %}
+
+
           <h2 class="mt-4">Cultura</h2><hr>
           <p>Não se conhece com certeza a origem do nome guajajara, mas provavelmente foi dado aos Tenetehára pelos Tupinambá. Tanto entre os próprios índios quanto na literatura científica, atualmente a denominação guajajara é mais usada do que Tenetehára.</p>
           <p>Os Guajajara são reconhecidos por sua arte na produção de cerâmicas. Cada aldeia possui seu próprio líder, suas aldeias que antes eram todas formalizadas hoje podem ser quadradas ou redondas.</p>
           <p>AS fontes de renda mais comuns são a comercialização de produtos agrícolas, a venda de artesanato e trabalhos temporários (para os colonos) ou permanentes (para a Funai).</p>
 
           <p>Outra fonte de dinheiro é a venda de maconha, plantada tradicionalmente pelos guajajara. A maconha foi introduzida por escravos africanos NO século XVIII e seu consumo ainda é uma parte integral da cultura indígena, mas sua venda gera conflitos muito sérios e violentos com AS Polícias Federal e Militar. </p>
+
+          h4 class="mt-4">Tribos similares:</h4>
+            {% for n in r_cultura %}
+              <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+            {% endfor %}
 
           <h2 class="mt-4">Religião</h2><hr>
             <p>A cosmologia tradicional é a típica dos povos tupi-guaranis, distinguindo-se quatro categorias de seres sobrenaturais, que recebem a designação genérica de karowara:</p>
@@ -81,67 +97,34 @@
             <p>O motivo mítico dos gêmeos é comum entre diversos povos tupis. Para os guajajaras, eles são heróis culturais, ao lado de Maíra-pai, embora não tenham o mesmo pai. Enquanto Maíra-ira tem origem divina, Mucura-ira tem origem animal, como seu pai. O mito relata sua odisseia por um mundo cheio de desafios e perigos, desde os primeiros momentos dentro da barriga da mãe até o encontro final com Maíra. O maior desafio é sua sobrevivência entre as onças, que são canibais e matam a mãe dos dois, mas os gêmeos se vingam delas brutalmente. No decorrer dos anos, os dois aprendem superar todos os perigos naturais e supernaturais, mas Mucura-ira sofre mais devido a sua natureza humana.
 
             </p>
+
+            <h4 class="mt-4">Tribos similares:</h4>
+            {% for n in r_religiao %}
+              <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+            {% endfor %}
+
           
           <h2 class="mt-4">Localização e População</h2><hr>
             <p>Todas as Terras Indígenas habitadas pelos guajajara estão situadas no centro do Maranhão, nas regiões dos rios Pindaré, Grajaú, Mearim e Zutiua. São cobertas pelas florestas altas da Amazônia e por matas de cerradão, mais baixas, sendo estas matas de transição entre as florestas amazônicas e os cerrados. Os guajajara nunca habitaram os cerrados vizinhos, região dos povos jê. Sua região mais antiga, historicamente conhecida, foi o médio rio Pindaré.</p>
 
             <p>A partir do final do século XVIII e início do seguinte, expandiram seu território para as regiões dos rios Grajaú e Mearim, onde se estabeleceram pouco tempo antes da chegada dos brancos, disputando com vários grupos timbira as áreas de caça. Por volta de 1850, uma parte dos Tenetehára migrou para o norte e mais tarde passou a ser chamada de Tembé pelos regionais.</p>
+
+            <h4 class="mt-4">Tribos similares:</h4>
+            {% for n in r_locpop %}
+              <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+            {% endfor %}
           
           <h2 class="mt-4">Dieta Alimentar</h2><hr>
             <p>A principal atividade de subsistência é a lavoura, sendo comum o plantio de mandioca, macaxeira, milho, arroz, abóbora, melancia, feijão, fava, inhame, cará, gergelim, amendoim. Na estação seca, de maio a novembro, são realizadas a broca, derrubada, queimada, coivara e limpeza, enquanto de novembro a fevereiro se faz o plantio e as capinas.</p>
             <p>Os guajajara costumam pescar cerca de 36 espécies diferentes, sendo o cará, o cascudo, a lampreia, o mandi, o pacu, o piau e a traíra AS mais comuns. Durante AS últimas décadas, a caça tornou-se uma atividade cada vez menos produtiva por causa da concorrência dos brancos e das limitações das áreas. </p>
             <p>Os guajajara caçam tradicionalmente mais de 56 espécies, sendo AS mais comuns o caititu, a cutia, o jacamim, o jacu, a queixada e diversas espécies de macacos e tatus. A coleta ainda é praticada por quase todos os guajajara. AS atividades de coleta, NO entanto, estão sendo substituídas cada vez mais pela fruticultura nas aldeias e roças. Atualmente os guajajara plantam cerca de 30 tipos de fruteiras e palmeiras. </p>
-          
+          </p>
+            <h4 class="mt-4">Tribos similares:</h4>
+            {% for n in r_dieta %}
+              <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+            {% endfor %}
 
          
-
-        </div>
-
-        <!-- Sidebar Widgets Column -->
-        <div class="col-md-4">
-
-          <!-- Categories Widget -->
-          <div class="card my-4">
-            <h5 class="card-header">Links</h5>
-            <div class="card-body">
-              <div class="row">
-                <div class="col-lg-6">
-                  <ul class="list-unstyled mb-0">
-                    <li>
-                      <a href="#">Web Design</a>
-                    </li>
-                    <li>
-                      <a href="#">HTML</a>
-                    </li>
-                    <li>
-                      <a href="#">Freebies</a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="col-lg-6">
-                  <ul class="list-unstyled mb-0">
-                    <li>
-                      <a href="#">JavaScript</a>
-                    </li>
-                    <li>
-                      <a href="#">CSS</a>
-                    </li>
-                    <li>
-                      <a href="#">Tutorials</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Side Widget -->
-          <div class="card my-4">
-            <h5 class="card-header">Fotos</h5>
-            <div class="card-body">
-              You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
-            </div>
-          </div>
 
         </div>
 
