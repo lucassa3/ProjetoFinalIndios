@@ -61,16 +61,44 @@
 
             </p>
 
+            <h4 class="mt-4">Tribos similares:</h4>
+            {% for n in r_historia %}
+              <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+            {% endfor %}
+
+
           <h2 class="mt-4">Lingua</h2><hr>
             <p>A linguagem caingangue é classificada como um membro da família linguística jê, a maior família linguística do tronco linguístico macro-jê. O tradicional território caingangue é ocupado atualmente pelos estados de São Paulo, Paraná, Santa Catarina e Rio Grande do Sul, no Brasil. Hoje, eles vivem em aproximadamente trinta aldeias, principalmente no Paraná e no Rio Grande do Sul.</p>
+          
+            <h4 class="mt-4">Tribos similares:</h4>
+            {% for n in r_lingua %}
+              <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+            {% endfor %}
+
+
+
+
             
           <h2 class="mt-4">Cultura</h2><hr>
             <p>Cada aldeia caingangue se divide em duas metades chamadas kaiurukré e kamé (ou, usando a escrita da própria língua: Kanhru e Kamẽ). Os membros de cada metade só podem se casar com os membros da outra metade. Os filhos (de ambos os sexos) sempre pertencerão à metade (ou à marca) do pai.</p>
 
             <p >Os Caingangues fabricam tecidos, cabaças, cerâmicas, e arco e flechas cujos corpos são enfeitados com desenhos que refletem sua cosmologia dualista e a metades sociais. Usam seus instrumentos nas festas dos mortos como buzinas de chifre, flauta de taquara, maracás e apitos e também os instrumentos importados dos brancos como violão e acordeão (Tommasino e Fernandes 2001).</p>
+            
+            <h4 class="mt-4">Tribos similares:</h4>
+            {% for n in r_cultura %}
+              <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+            {% endfor %}
+
 
           <h2 class="mt-4">Religião</h2><hr>
             <p>Ocupando região tão ampla, em incontáveis grupos ou aldeias de população média em torno de 150 a duzentas pessoas (se são válidos os dados que temos para meados do século XIX), embora às vezes articulados por uma lideranças regionais, os caingangues seriam alvo de diferentes momentos de expansão das fronteiras econômicas brasileiras. Alguns grupos caingangues e xoclengues teriam sido convertidos por missões jesuítas no oeste do Paraná e no norte rio-grandense nas primeiras décadas do século XVII, mas não por muito tempo. Depois desse período, apenas no final do século XVIII foram atingidos por frentes de exploração militar, na região de Guarapuava, no atual estado brasileiro do Paraná, onde, em 1812, se iniciaram os primeiros contatos permanentes de um grupo caingangue com uma comunidade de língua portuguesa.</p>
+          
+            <h4 class="mt-4">Tribos similares:</h4>
+            {% for n in r_religiao %}
+              <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+            {% endfor %}
+
+
           
           <h2 class="mt-4">Localização e População</h2><hr>
             <p>Atualmente, os caingangues ocupam cerca de 300 áreas reduzidas, distribuídas sobre seu antigo território, nos estados de São Paulo, Paraná, Santa Catarina e Rio Grande do Sul, no Brasil. Sua população é de aproximadamente 34 mil pessoas.[4] Os caingangues estão entre os cinco povos indígenas mais numerosos no Brasil atualmente. 
@@ -81,6 +109,12 @@
             Na literatura internacional, o termo "caingangues" tem designado o povo que, na literatura de língua portuguesa, é chamado "xoclengue" (que hoje se autodenominam laklãnõ). Os xoclengues foram descritos por Jules Henry (1941: Jungle People: A Kaingáng Tribe of the Highlands of Brazil), pesquisador que esteve entre eles no início da década de 1930, no leste de Santa Catarina. Por isso, o que se costuma referir na literatura internacional como característica da cultura caingangue é, na verdade, característica da cultura xoclengue, segundo a descrição de Jules Henry.
               
               </p>
+            
+            <h4 class="mt-4">Tribos similares:</h4>
+            {% for n in r_locpop %}
+              <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+            {% endfor %}
+
           
           <h2 class="mt-4">Dieta Alimentar</h2><hr>
             <p>Os pinhões eram importantíssimos na dieta kaingang, mas também o palmito,
@@ -121,7 +155,10 @@
 
 
             </p>
-          
+            <h4 class="mt-4">Tribos similares:</h4>
+            {% for n in r_dieta %}
+              <p><a href="{{ url_for(n) }}">{{n}}</a></p>
+            {% endfor %}
 
          
 

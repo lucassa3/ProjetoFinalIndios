@@ -4,6 +4,7 @@ import socnet as sn
 from math import inf, isinf
 from queue import Queue
 from random import randint
+import random
 import requests
 
 
@@ -136,7 +137,7 @@ tribos_dict = {'caetes': 0, 'caiapos': 0, 'caingangue': 0, 'guajajaras': 0, 'gua
 
 @app.route('/')
 def quiz():
-
+    global tribos_dict
     tribos_dict = dict.fromkeys(tribos_dict, 0)
 
     return render_template('quiz.html')
@@ -144,22 +145,24 @@ def quiz():
 @app.route('/validateQuiz', methods = ["POST"])
 def validateQuiz():
     #TODO
+    print("oioioioi")
+    global tribos_dict
+    historia = int(request.form['Historia'])
+    lingua = int(request.form['Lingua'])
 
-    historia = int(request.form['historia'])
-    lingua = int(request.form['lingua'])
-
-    cultura1 = request.form['cultura-1'] != None
-    cultura2 = request.form['cultura-2'] != None
-    cultura3 = request.form['cultura-3'] != None
-    cultura4 = request.form['cultura-4'] != None
-    cultura5 = request.form['cultura-5'] != None
-    cultura6 = request.form['cultura-6'] != None 
-    cultura7 = request.form['cultura-7'] != None
-    cultura8 = request.form['cultura-8'] != None
     
-    religiao = int(request.form['religiao'])
-    locpop = int(request.form['locpop'])
-    dieta = int(request.form['dieta'])
+    cultura1 = request.form.get('check1')
+    cultura2 = request.form.get('check2')
+    cultura3 = request.form.get('check3') 
+    cultura4 = request.form.get('check4') 
+    cultura5 = request.form.get('check5') 
+    cultura6 = request.form.get('check6') 
+    cultura7 = request.form.get('check7')
+    cultura8 = request.form.get('check8')
+    
+    religiao = int(request.form['Religiao'])
+    locpop = int(request.form['Localizacao'])
+    dieta = int(request.form['Dieta'])
 
 
     if lingua == 1:
@@ -174,33 +177,33 @@ def validateQuiz():
     elif lingua == 3:
         tribos_dict['pataxos'] +=1
     elif lingua == 4:
-        tribos_dict['terena'] +=1
+        tribos_dict['terenas'] +=1
     elif lingua == 5:
         tribos_dict['ticunas'] +=1
     elif lingua == 6:
         tribos_dict['marubos'] +=1
 
     
-    if cultura1 == True:
+    if cultura1:
         tribos_dict['tapuias'] +=1
-    if cultura2 == True:
+    if cultura2:
         tribos_dict['caetes'] +=1
-    if cultura3 == True:
+    if cultura3:
         tribos_dict['xavantes'] +=1
         tribos_dict['tapuias'] +=1
-    if cultura4 == True:
+    if cultura4:
         tribos_dict['guaranis'] +=1
         tribos_dict['marubos'] +=1
-    if cultura5 == True:
+    if cultura5:
         tribos_dict['guaranis'] +=1
-    if cultura6 == True:
+    if cultura6:
         tribos_dict['macuxi'] +=1
         tribos_dict['caingangue'] +=1
         tribos_dict['xavantes'] +=1
-    if cultura7 == True:
+    if cultura7:
         tribos_dict['xavantes'] +=1
-        tribos_dict['terena'] +=1
-    if cultura8 == True:
+        tribos_dict['terenas'] +=1
+    if cultura8:
         tribos_dict['caiapos'] +=1
         tribos_dict['caingangue'] +=1
 
@@ -209,59 +212,143 @@ def validateQuiz():
 
 @app.route('/caetes')
 def caetes():
-    return render_template('caetes.html')
+    r_historia = links(historia_gr, 'caingangue')
+    r_lingua = links(lingua_gr, 'caingangue')
+    r_cultura = links(cultura_gr, 'caingangue')
+    r_religiao = links(religiao_gr, 'caingangue')
+    r_locpop = links(loc_pop_gr, 'caingangue')
+    r_dieta = links(dieta_gr, 'caingangue')
+    return render_template('caetes.html', r_historia=r_historia,  r_lingua=r_lingua, r_cultura=r_cultura, r_religiao=r_religiao, r_locpop=r_locpop, r_dieta=r_dieta)
 
 @app.route('/caiapos')
 def caiapos():
-    return render_template('caiapos.html')
+    r_historia = links(historia_gr, 'caingangue')
+    r_lingua = links(lingua_gr, 'caingangue')
+    r_cultura = links(cultura_gr, 'caingangue')
+    r_religiao = links(religiao_gr, 'caingangue')
+    r_locpop = links(loc_pop_gr, 'caingangue')
+    r_dieta = links(dieta_gr, 'caingangue')
+    return render_template('caiapos.html', r_historia=r_historia,  r_lingua=r_lingua, r_cultura=r_cultura, r_religiao=r_religiao, r_locpop=r_locpop, r_dieta=r_dieta)
 
 @app.route('/caingangue')
 def caingangue():
-    return render_template('caingangue.html')
+    r_historia = links(historia_gr, 'caingangue')
+    r_lingua = links(lingua_gr, 'caingangue')
+    r_cultura = links(cultura_gr, 'caingangue')
+    r_religiao = links(religiao_gr, 'caingangue')
+    r_locpop = links(loc_pop_gr, 'caingangue')
+    r_dieta = links(dieta_gr, 'caingangue')
+    return render_template('caingangue.html', r_historia=r_historia,  r_lingua=r_lingua, r_cultura=r_cultura, r_religiao=r_religiao, r_locpop=r_locpop, r_dieta=r_dieta)
 
 @app.route('/guajajaras')
 def guajajaras():
-    return render_template('guajajaras.html')
+    r_historia = links(historia_gr, 'caingangue')
+    r_lingua = links(lingua_gr, 'caingangue')
+    r_cultura = links(cultura_gr, 'caingangue')
+    r_religiao = links(religiao_gr, 'caingangue')
+    r_locpop = links(loc_pop_gr, 'caingangue')
+    r_dieta = links(dieta_gr, 'caingangue')
+    return render_template('guajajaras.html', r_historia=r_historia,  r_lingua=r_lingua, r_cultura=r_cultura, r_religiao=r_religiao, r_locpop=r_locpop, r_dieta=r_dieta)
 
 @app.route('/guaranis')
 def guaranis():
-    return render_template('guaranis.html')
+    r_historia = links(historia_gr, 'caingangue')
+    r_lingua = links(lingua_gr, 'caingangue')
+    r_cultura = links(cultura_gr, 'caingangue')
+    r_religiao = links(religiao_gr, 'caingangue')
+    r_locpop = links(loc_pop_gr, 'caingangue')
+    r_dieta = links(dieta_gr, 'caingangue')
+    return render_template('guaranis.html', r_historia=r_historia,  r_lingua=r_lingua, r_cultura=r_cultura, r_religiao=r_religiao, r_locpop=r_locpop, r_dieta=r_dieta)
 
 @app.route('/ianomamis')
 def ianomamis():
-    return render_template('ianomamis.html')
+    r_historia = links(historia_gr, 'caingangue')
+    r_lingua = links(lingua_gr, 'caingangue')
+    r_cultura = links(cultura_gr, 'caingangue')
+    r_religiao = links(religiao_gr, 'caingangue')
+    r_locpop = links(loc_pop_gr, 'caingangue')
+    r_dieta = links(dieta_gr, 'caingangue')
+    return render_template('ianomamis.html', r_historia=r_historia,  r_lingua=r_lingua, r_cultura=r_cultura, r_religiao=r_religiao, r_locpop=r_locpop, r_dieta=r_dieta)
 
 @app.route('/macuxi')
 def macuxi():
-    return render_template('macuxi.html')
+    r_historia = links(historia_gr, 'caingangue')
+    r_lingua = links(lingua_gr, 'caingangue')
+    r_cultura = links(cultura_gr, 'caingangue')
+    r_religiao = links(religiao_gr, 'caingangue')
+    r_locpop = links(loc_pop_gr, 'caingangue')
+    r_dieta = links(dieta_gr, 'caingangue')
+    return render_template('macuxi.html', r_historia=r_historia,  r_lingua=r_lingua, r_cultura=r_cultura, r_religiao=r_religiao, r_locpop=r_locpop, r_dieta=r_dieta)
 
 @app.route('/marubos')
 def marubos():
-    return render_template('marubos.html')
+    r_historia = links(historia_gr, 'caingangue')
+    r_lingua = links(lingua_gr, 'caingangue')
+    r_cultura = links(cultura_gr, 'caingangue')
+    r_religiao = links(religiao_gr, 'caingangue')
+    r_locpop = links(loc_pop_gr, 'caingangue')
+    r_dieta = links(dieta_gr, 'caingangue')
+    return render_template('marubos.html', r_historia=r_historia,  r_lingua=r_lingua, r_cultura=r_cultura, r_religiao=r_religiao, r_locpop=r_locpop, r_dieta=r_dieta)
 
 @app.route('/pataxos')
 def pataxos():
-    return render_template('pataxos.html')
+    r_historia = links(historia_gr, 'caingangue')
+    r_lingua = links(lingua_gr, 'caingangue')
+    r_cultura = links(cultura_gr, 'caingangue')
+    r_religiao = links(religiao_gr, 'caingangue')
+    r_locpop = links(loc_pop_gr, 'caingangue')
+    r_dieta = links(dieta_gr, 'caingangue')
+    return render_template('pataxos.html', r_historia=r_historia,  r_lingua=r_lingua, r_cultura=r_cultura, r_religiao=r_religiao, r_locpop=r_locpop, r_dieta=r_dieta)
 
 @app.route('/potiguaras')
 def potiguaras():
-    return render_template('potiguaras.html')
+    r_historia = links(historia_gr, 'caingangue')
+    r_lingua = links(lingua_gr, 'caingangue')
+    r_cultura = links(cultura_gr, 'caingangue')
+    r_religiao = links(religiao_gr, 'caingangue')
+    r_locpop = links(loc_pop_gr, 'caingangue')
+    r_dieta = links(dieta_gr, 'caingangue')
+    return render_template('potiguaras.html', r_historia=r_historia,  r_lingua=r_lingua, r_cultura=r_cultura, r_religiao=r_religiao, r_locpop=r_locpop, r_dieta=r_dieta)
 
 @app.route('/tapuias')
 def tapuias():
-    return render_template('tapuias.html')
+    r_historia = links(historia_gr, 'caingangue')
+    r_lingua = links(lingua_gr, 'caingangue')
+    r_cultura = links(cultura_gr, 'caingangue')
+    r_religiao = links(religiao_gr, 'caingangue')
+    r_locpop = links(loc_pop_gr, 'caingangue')
+    r_dieta = links(dieta_gr, 'caingangue')
+    return render_template('tapuias.html', r_historia=r_historia,  r_lingua=r_lingua, r_cultura=r_cultura, r_religiao=r_religiao, r_locpop=r_locpop, r_dieta=r_dieta)
 
 @app.route('/terenas')
 def terenas():
-    return render_template('terenas.html')
+    r_historia = links(historia_gr, 'caingangue')
+    r_lingua = links(lingua_gr, 'caingangue')
+    r_cultura = links(cultura_gr, 'caingangue')
+    r_religiao = links(religiao_gr, 'caingangue')
+    r_locpop = links(loc_pop_gr, 'caingangue')
+    r_dieta = links(dieta_gr, 'caingangue')
+    return render_template('terenas.html', r_historia=r_historia,  r_lingua=r_lingua, r_cultura=r_cultura, r_religiao=r_religiao, r_locpop=r_locpop, r_dieta=r_dieta)
 
 @app.route('/ticunas')
 def ticunas():
-    return render_template('ticunas.html')
+    r_historia = links(historia_gr, 'caingangue')
+    r_lingua = links(lingua_gr, 'caingangue')
+    r_cultura = links(cultura_gr, 'caingangue')
+    r_religiao = links(religiao_gr, 'caingangue')
+    r_locpop = links(loc_pop_gr, 'caingangue')
+    r_dieta = links(dieta_gr, 'caingangue')
+    return render_template('ticunas.html', r_historia=r_historia,  r_lingua=r_lingua, r_cultura=r_cultura, r_religiao=r_religiao, r_locpop=r_locpop, r_dieta=r_dieta)
 
 @app.route('/xavantes')
 def xavantes():
-    return render_template('xavantes.html')
+    r_historia = links(historia_gr, 'caingangue')
+    r_lingua = links(lingua_gr, 'caingangue')
+    r_cultura = links(cultura_gr, 'caingangue')
+    r_religiao = links(religiao_gr, 'caingangue')
+    r_locpop = links(loc_pop_gr, 'caingangue')
+    r_dieta = links(dieta_gr, 'caingangue')
+    return render_template('xavantes.html', r_historia=r_historia,  r_lingua=r_lingua, r_cultura=r_cultura, r_religiao=r_religiao, r_locpop=r_locpop, r_dieta=r_dieta)
 
 
 if __name__ == '__main__':
