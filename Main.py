@@ -18,17 +18,18 @@ sn.edge_width = 1
     
 ###  Importar grafos dos topicos ####
 
-historia_gr = sn.load_graph('../historia.gml', has_pos=False)
-cultura_gr = sn.load_graph('../cutura.gml', has_pos=False)
-dieta_gr = sn.load_graph('../dieta.gml', has_pos=False)
-lingua_gr = sn.load_graph('../lingua.gml', has_pos=False)
-loc_pop_gr = sn.load_graph('../loc_pop.gml', has_pos=False)
-religiao_gr = sn.load_graph('../religiao.gml', has_pos=False)
+historia_gr = sn.load_graph('historia.gml', has_pos=False)
+cultura_gr = sn.load_graph('cultura.gml', has_pos=False)
+dieta_gr = sn.load_graph('dieta.gml', has_pos=False)
+lingua_gr = sn.load_graph('lingua.gml', has_pos=False)
+loc_pop_gr = sn.load_graph('loc_pop.gml', has_pos=False)
+religiao_gr = sn.load_graph('religiao.gml', has_pos=False)
+geral_gr = sn.load_graph('geral.gml', has_pos=False)
 
 ### func de PageRank ###
 
-for n in geral.nodes():
-    geral.node[n]['pagerank'] = 0
+for n in geral_gr.nodes():
+    geral_gr.node[n]['pagerank'] = 0
     
 def equals(a, b):
     return abs(a - b) < 0.000000001
@@ -131,10 +132,6 @@ for t in topicos:
             some_other_node = randint(0,13)
             add_edge(t, s, some_other_node)
             
-
-
-
-
 tribos_dict = {'caetes': 0, 'caiapos': 0, 'caingangue': 0, 'guajajaras': 0, 'guaranis': 0, 'ianomamis': 0, 'macuxi': 0, 'marubos': 0, 'pataxos': 0, 'potiguaras': 0, 'tapuias': 0, 'terenas': 0, 'ticunas': 0, 'xavantes': 0}
 
 @app.route('/')
@@ -266,52 +263,6 @@ def ticunas():
 def xavantes():
     return render_template('xavantes.html')
 
-
-
-@app.route('/youInsper2')
-def hello2():
-    result = firebase.get('/videos', None)
-
-    del videos[:]
-    del sum_ratings[:]
-    del n_ratings[:]
-
-    for i in range(len(result)):
-        sum_ratings.append(result[i]['sum_rating'])
-        n_ratings.append(result[i]['n_rating'])
-
-        rating = 0
-        
-        if (result[i]['n_rating']):
-            rating = result[i]['sum_rating']/result[i]['n_rating']
-        
-        videos.append((i, result[i]['url'], rating))
-
-    print(videos)
-    print(sum_ratings)
-    print(n_ratings)
-
-    return render_template('index2.html', videos=videos)
-
-@app.route('/getip')
-def get_my_ip():
-    return jsonify({'ip': request.remote_addr}), 200
-
-@app.route('/validateRating', methods=['POST'])
-def validateRating():
-    tags =  []
-    
-    for i in range(len(videos)):
-        tags.append(request.form['tag-'+str(i)+''])
-
-    print("ok")
-
-    for i in range(len(videos)):
-        if tags[i] != "none":
-            result = firebase.put('/videos/'+str(i)+'/', "sum_rating", int(sum_ratings[i])+int(tags[i]))
-            result = firebase.put('/videos/'+str(i)+'/', "n_rating", int(n_ratings[i])+1)
-
-    return redirect('/')
 
 if __name__ == '__main__':
     app.run()
