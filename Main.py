@@ -171,7 +171,7 @@ def validateQuiz():
         tribos_dict['xavantes'] +=1
     elif lingua == 2:
         tribos_dict['caetes'] +=1
-        tribos_dict['guajajara'] +=1
+        tribos_dict['guajajaras'] +=1
         tribos_dict['guaranis'] +=1
         tribos_dict['tapuias'] +=1
     elif lingua == 3:
@@ -205,6 +205,91 @@ def validateQuiz():
         tribos_dict['terenas'] +=1
     if cultura8:
         tribos_dict['caiapos'] +=1
+        tribos_dict['caingangue'] +=1
+
+    if dieta == 1:
+        tribos_dict['macuxi'] +=1
+    elif dieta == 2:
+        tribos_dict['tapuias'] +=1
+        tribos_dict['ianomamis'] +=1
+        tribos_dict['guaranis'] +=1
+        tribos_dict['ticunas'] +=1
+        tribos_dict['xavantes'] +=1
+    elif dieta == 3:
+        tribos_dict['potiguaras'] +=1
+        tribos_dict['terenas'] +=1
+    elif dieta == 4:
+        tribos_dict['pataxos'] +=1
+    elif dieta == 5:
+        tribos_dict['caetes'] +=1
+        tribos_dict['caingangue'] +=1
+        tribos_dict['guajajaras'] +=1
+        tribos_dict['marubos'] +=1
+        tribos_dict['caiapos'] +=1
+
+    if historia == 1:
+        tribos_dict['caetes'] +=1
+        tribos_dict['caingangue'] +=1
+        tribos_dict['ticunas'] +=1
+        tribos_dict['tapuias'] +=1
+        tribos_dict['terenas'] +=1
+    elif historia == 2:
+        tribos_dict['guajajaras'] +=1
+        tribos_dict['macuxi'] +=1
+        tribos_dict['pataxos'] +=1
+        tribos_dict['caiapos'] +=1        
+    elif historia == 3:
+        tribos_dict['potiguaras'] +=1
+        tribos_dict['guaranis'] +=1
+    elif historia == 4:
+        tribos_dict['ianomamis'] +=1
+        tribos_dict['marubos'] +=1
+        tribos_dict['xavantes'] +=1
+
+
+    if religiao == 1:
+        tribos_dict['caingangue'] +=1
+        tribos_dict['pataxos'] +=1
+        tribos_dict['xavantes'] +=1
+        tribos_dict['potiguaras'] +=1
+    elif religiao == 2:
+        tribos_dict['guaranis'] +=1
+        tribos_dict['guajajaras'] +=1
+        tribos_dict['xavantes'] +=1
+    elif religiao == 3:
+        tribos_dict['ianomamis'] +=1
+        tribos_dict['potiguaras'] +=1
+        tribos_dict['terenas'] +=1
+        tribos_dict['marubos'] +=1
+        tribos_dict['guaranis'] +=1
+    elif religiao == 4:
+        tribos_dict['tapuias'] +=1
+        tribos_dict['marubos'] +=1
+        tribos_dict['macuxi'] +=1
+    elif religiao == 5:
+        tribos_dict['caiapos'] +=1
+        tribos_dict['marubos'] +=1
+
+    if locpop ==1:
+        tribos_dict['guajajaras'] +=1
+        tribos_dict['ianomamis'] +=1
+        tribos_dict['macuxi'] +=1
+        tribos_dict['marubos'] +=1
+        tribos_dict['ticunas'] +=1
+    elif locpop == 2:
+        tribos_dict['potiguaras'] +=1
+        tribos_dict['pataxos'] +=1
+        tribos_dict['tapuias'] +=1
+    elif locpop == 3:
+        tribos_dict['caiapos'] +=1
+        tribos_dict['guaranis'] +=1
+        tribos_dict['terenas'] +=1
+        tribos_dict['xavantes'] +=1
+    elif locpop == 4:
+        tribos_dict['caingangue'] +=1
+        tribos_dict['guaranis'] +=1
+    elif locpop == 5:
+        tribos_dict['guaranis'] +=1
         tribos_dict['caingangue'] +=1
 
     print(str(max(tribos_dict, key=tribos_dict.get)))
