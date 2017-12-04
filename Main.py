@@ -11,12 +11,6 @@ from operator import itemgetter
 
 app = Flask(__name__)
 
-
-
-sn.graph_width = 400
-sn.graph_height = 225
-sn.edge_width = 1
-
     
 ###  Importar grafos dos topicos ####
 
@@ -145,6 +139,12 @@ calculate_pagerank(geral_gr)
 for n in geral_gr.nodes():
     print(geral_gr.nodes[n]['pagerank'])
 
+def remove_node_name(g, node_name):
+    for n in g.nodes():
+        if g.node[n]['nome'] == node_name:
+            print(g.node[n]['nome'])
+            g.remove_node(n)
+            break
 
 
 
@@ -155,7 +155,6 @@ tribos_dict = {'caetes': 0, 'caiapos': 0, 'caingangue': 0, 'guajajaras': 0, 'gua
 total_dict = {'caetes': 0, 'caiapos': 0, 'caingangue': 0, 'guajajaras': 0, 'guaranis': 0, 'ianomamis': 0, 'macuxi': 0, 'marubos': 0, 'pataxos': 0, 'potiguaras': 0, 'tapuias': 0, 'terenas': 0, 'ticunas': 0, 'xavantes': 0}
 
 def pagerank_answers(g):
-    print("ooooooooo")
     global tribos_dict
     global total_dict
     for n in g.nodes():
@@ -178,7 +177,6 @@ def quiz():
 
 @app.route('/validateQuiz', methods = ["POST"])
 def validateQuiz():
-    print("oioioioi")
     global tribos_dict
     historia = int(request.form['Historia'])
     lingua = int(request.form['Lingua'])
@@ -324,6 +322,10 @@ def validateQuiz():
     elif locpop == 5:
         tribos_dict['guaranis'] +=1
         tribos_dict['caingangue'] +=1
+    
+    oi = str(max(tribos_dict, key=tribos_dict.get))
+    #remove_node_name(geral_gr, oi)
+        
 
     print(str(max(tribos_dict, key=tribos_dict.get)))
     return redirect('/'+ str(max(tribos_dict, key=tribos_dict.get))+'')
